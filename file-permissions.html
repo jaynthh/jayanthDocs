@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+    <title>File Permissions | Linux Guide</title>
+
+    <meta
+      name="description"
+      content="Learn Linux file permissions, chmod, chown, and how to manage access control in real-world scenarios."
+    />
+    <meta
+      name="keywords"
+      content="Linux Permissions, chmod, chown, rwx, Linux Security"
+    />
+    <meta name="author" content="Jayanth" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="/images/favicon.ico" />
+
+    <style>
+      /* 🔥 Neo accents */
+      .neo-command {
+        color: #00ffcc;
+        background: rgba(0, 255, 204, 0.08);
+        padding: 8px 10px;
+        border-radius: 6px;
+        display: block;
+        margin: 6px 0;
+        font-family: monospace;
+      }
+
+      .neo-highlight {
+        color: #ffd166;
+      }
+
+      .neo-box {
+        border-left: 3px solid #6c5ce7;
+        padding-left: 12px;
+        margin: 12px 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="page-shell">
+      <!-- HEADER -->
+      <header class="topbar">
+        <div class="topbar-inner">
+          <div class="brand">
+            <div class="brand-mark"></div>
+            <div class="brand-text">
+              <span class="brand-title">Jayanth Docs</span>
+              <span class="brand-sub"
+                >Real-World ITSM · Troubleshooting Guides</span
+              >
+            </div>
+          </div>
+
+          <nav class="top-nav">
+            <a href="index.html">Overview</a>
+            <a href="itsm.html">ITSM</a>
+            <a href="troubleshooting.html">Troubleshooting</a>
+            <a href="networking.html">Networking</a>
+            <a href="linux.html" class="nav-primary">Linux</a>
+            <a href="devops.html">DevOps</a>
+          </nav>
+        </div>
+      </header>
+
+      <main class="main-wrap">
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+          <div class="sidebar-title">Linux</div>
+
+          <div class="sidebar-section">
+            <div class="sidebar-section-label">Security</div>
+            <ul class="sidebar-list">
+              <li><a href="linux-basics.html">Linux Basics</a></li>
+              <li><a href="linux.html">Linux Overview</a></li>
+              <li><a href="linux-commands.html">Linux Commands</a></li>
+              <li>
+                <a href="file-permissions.html" class="active"
+                  >File Permissions</a
+                >
+              </li>
+            </ul>
+          </div>
+        </aside>
+
+        <!-- CONTENT -->
+        <article class="content">
+          <div class="pill"><span class="pill-dot"></span>Linux</div>
+
+          <h1 class="article-title">File Permissions</h1>
+          <p class="article-subtitle">
+            Understand how Linux controls access to files using read, write, and
+            execute permissions.
+          </p>
+
+          <div class="meta-row">
+            <span class="meta-pill">Level: Beginner</span>
+            <span class="meta-pill">Topic: Security</span>
+          </div>
+
+          <!-- WHAT -->
+          <section class="article-section">
+            <h2>What are File Permissions?</h2>
+            <p>
+              Linux uses permissions to control who can read, write, or execute
+              a file.
+            </p>
+          </section>
+
+          <!-- FORMAT -->
+          <section class="article-section">
+            <h2>Permission Format</h2>
+
+            <code class="neo-command">-rwxr-xr--</code>
+
+            <div class="neo-box">
+              <p><strong>Breakdown:</strong></p>
+              <ul>
+                <li><span class="neo-highlight">r</span> = read</li>
+                <li><span class="neo-highlight">w</span> = write</li>
+                <li><span class="neo-highlight">x</span> = execute</li>
+              </ul>
+
+              <p>Groups:</p>
+              <ul>
+                <li>Owner → rwx</li>
+                <li>Group → r-x</li>
+                <li>Others → r--</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- NUMERIC -->
+          <section class="article-section">
+            <h2>Numeric Permissions</h2>
+
+            <code class="neo-command"> r = 4 w = 2 x = 1 </code>
+
+            <code class="neo-command"> 7 = rwx 6 = rw- 5 = r-x </code>
+
+            <p><strong>Example:</strong></p>
+            <code class="neo-command">chmod 755 file.sh</code>
+          </section>
+
+          <!-- CHMOD -->
+          <section class="article-section">
+            <h2>chmod (Change Permission)</h2>
+
+            <code class="neo-command">chmod 755 script.sh</code>
+            <p>Gives full access to owner, limited to others.</p>
+
+            <code class="neo-command">chmod +x script.sh</code>
+            <p>Makes file executable.</p>
+          </section>
+
+          <!-- CHOWN -->
+          <section class="article-section">
+            <h2>chown (Change Owner)</h2>
+
+            <code class="neo-command">chown user file.txt</code>
+            <p>Changes file owner.</p>
+          </section>
+
+          <!-- REAL USE -->
+          <section class="article-section">
+            <h2>Real-World Use</h2>
+
+            <div class="neo-box">
+              <code class="neo-command"> chmod +x deploy.sh ./deploy.sh </code>
+            </div>
+
+            <p>Used in DevOps to run scripts and control access to files.</p>
+          </section>
+
+          <!-- TIP -->
+          <section class="article-section">
+            <h2>💡 Real Tip</h2>
+            <p>
+              Never give full permission (777) unless necessary — it’s a
+              security risk.
+            </p>
+          </section>
+
+          <!-- NAV -->
+          <div class="pager-row">
+            <a href="linux-commands.html" class="pager-btn secondary"
+              >◀ Back: Linux Commands</a
+            >
+            <a href="devops.html" class="pager-btn">Next: DevOps ▶</a>
+          </div>
+        </article>
+      </main>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <span>© 2026 Jayanth Boddu ™️</span>
+        <span>Built with pure HTML & CSS</span>
+      </footer>
+    </div>
+  </body>
+</html>

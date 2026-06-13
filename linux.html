@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+    <title>Linux Basics | IT Support Guide</title>
+
+    <meta
+      name="description"
+      content="Learn Linux basics and essential commands used in IT support and DevOps."
+    />
+    <meta name="keywords" content="Linux, Linux Commands, DevOps, IT Support" />
+    <meta name="author" content="Jayanth" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="/images/favicon.ico" />
+
+    <style>
+      /* 🔥 NEO COLORS (minimal usage) */
+      .neo-command {
+        color: #00ffcc;
+        background: rgba(0, 255, 204, 0.08);
+        padding: 8px;
+        border-radius: 6px;
+        display: block;
+      }
+
+      .neo-highlight {
+        color: #ffd166;
+      }
+
+      .neo-box {
+        border-left: 3px solid #6c5ce7;
+        padding-left: 12px;
+        margin: 10px 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="page-shell">
+      <!-- HEADER -->
+      <header class="topbar">
+        <div class="topbar-inner">
+          <div class="brand">
+            <div class="brand-mark"></div>
+            <div class="brand-text">
+              <span class="brand-title">Jayanth Docs</span>
+              <span class="brand-sub"
+                >Real-World ITSM · Troubleshooting Guides</span
+              >
+            </div>
+          </div>
+
+          <nav class="top-nav">
+            <a href="index.html">Overview</a>
+            <a href="itsm.html">ITSM</a>
+            <a href="troubleshooting.html">Troubleshooting</a>
+            <a href="networking.html">Networking</a>
+            <a href="linux.html" class="nav-primary">Linux</a>
+            <a href="devops.html">DevOps</a>
+          </nav>
+        </div>
+      </header>
+
+      <main class="main-wrap">
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+          <div class="sidebar-title">Linux</div>
+
+          <div class="sidebar-section">
+            <div class="sidebar-section-label">Basics</div>
+            <ul class="sidebar-list">
+              <li><a href="linux.html" class="active">Linux Overview</a></li>
+              <li><a href="linux-basics.html">Linux Basics</a></li>
+              <li><a href="linux-commands.html">Linux Commands</a></li>
+              <li><a href="file-permissions.html">File System</a></li>
+            </ul>
+          </div>
+        </aside>
+
+        <!-- CONTENT -->
+        <article class="content">
+          <div class="pill"><span class="pill-dot"></span>Linux</div>
+
+          <h1 class="article-title">Linux Basics</h1>
+          <p class="article-subtitle">
+            Learn how Linux works and the essential commands used in IT support
+            and DevOps environments.
+          </p>
+
+          <div class="meta-row">
+            <span class="meta-pill">Level: Beginner</span>
+            <span class="meta-pill">Track: DevOps / Linux</span>
+          </div>
+
+          <!-- WHAT IS -->
+          <section class="article-section">
+            <h2>What is Linux?</h2>
+            <p>
+              Linux is an open-source operating system widely used in servers,
+              cloud, and DevOps environments.
+            </p>
+          </section>
+
+          <!-- WHY -->
+          <section class="article-section">
+            <h2>Why Linux is Important</h2>
+            <ul>
+              <li>Used in most servers</li>
+              <li>Required for DevOps</li>
+              <li>Fast and secure</li>
+            </ul>
+          </section>
+
+          <!-- COMMANDS -->
+          <section class="article-section">
+            <h2>Basic Commands</h2>
+
+            <p><span class="neo-highlight">Check current directory:</span></p>
+            <code class="neo-command">pwd</code>
+
+            <p><span class="neo-highlight">List files:</span></p>
+            <code class="neo-command">ls</code>
+
+            <p><span class="neo-highlight">Change directory:</span></p>
+            <code class="neo-command">cd /home</code>
+
+            <p><span class="neo-highlight">Create file:</span></p>
+            <code class="neo-command">touch file.txt</code>
+          </section>
+
+          <!-- EXAMPLE -->
+          <section class="article-section">
+            <h2>Example Workflow</h2>
+
+            <div class="neo-box">
+              <code class="neo-command"> cd /home ls touch test.txt </code>
+            </div>
+
+            <p>
+              This sequence moves to a directory, lists files, and creates a new
+              file.
+            </p>
+          </section>
+
+          <!-- REAL USE -->
+          <section class="article-section">
+            <h2>Real-World Use</h2>
+            <p>
+              In DevOps and IT support, Linux is used to manage servers, deploy
+              applications, and monitor systems.
+            </p>
+          </section>
+
+          <!-- TIP -->
+          <section class="article-section">
+            <h2>💡 Real Tip</h2>
+            <p>
+              Focus on practicing commands daily. Linux is learned by doing, not
+              reading.
+            </p>
+          </section>
+
+          <!-- NAV -->
+          <div class="pager-row">
+            <a href="networking.html" class="pager-btn secondary"
+              >◀ Back: Networking</a
+            >
+            <a href="linux-basics.html" class="pager-btn"
+              >Next: Linux Basics ▶</a
+            >
+          </div>
+        </article>
+      </main>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <span>© 2026 Jayanth Boddu ™️</span>
+        <span>Built with pure HTML & CSS</span>
+      </footer>
+    </div>
+  </body>
+</html>

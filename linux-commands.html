@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+    <title>Linux Commands | Pro Guide</title>
+
+    <meta
+      name="description"
+      content="Learn essential Linux commands for file management, process control, and networking in DevOps and IT support."
+    />
+    <meta name="keywords" content="Linux Commands, DevOps Linux, Linux CLI" />
+    <meta name="author" content="Jayanth" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="/images/favicon.ico" />
+
+    <style>
+      /* 🔥 Neo PRO styling */
+      .neo-command {
+        color: #00ffcc;
+        background: rgba(0, 255, 204, 0.08);
+        padding: 8px 10px;
+        border-radius: 6px;
+        display: block;
+        margin: 6px 0;
+        font-family: monospace;
+      }
+
+      .neo-section {
+        border-left: 3px solid #6c5ce7;
+        padding-left: 12px;
+        margin-bottom: 15px;
+      }
+
+      .neo-title {
+        color: #ffd166;
+        font-weight: 600;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="page-shell">
+      <!-- HEADER -->
+      <header class="topbar">
+        <div class="topbar-inner">
+          <div class="brand">
+            <div class="brand-mark"></div>
+            <div class="brand-text">
+              <span class="brand-title">Jayanth Docs</span>
+              <span class="brand-sub"
+                >Real-World ITSM · Troubleshooting Guides</span
+              >
+            </div>
+          </div>
+
+          <nav class="top-nav">
+            <a href="index.html">Overview</a>
+            <a href="itsm.html">ITSM</a>
+            <a href="troubleshooting.html">Troubleshooting</a>
+            <a href="networking.html">Networking</a>
+            <a href="linux.html" class="nav-primary">Linux</a>
+            <a href="devops.html">DevOps</a>
+          </nav>
+        </div>
+      </header>
+
+      <main class="main-wrap">
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+          <div class="sidebar-title">Linux</div>
+
+          <div class="sidebar-section">
+            <div class="sidebar-section-label">Commands</div>
+            <ul class="sidebar-list">
+              <li><a href="linux-basics.html">Linux Basics</a></li>
+              <li><a href="linux.html">Linux Overview</a></li>
+              <li>
+                <a href="linux-commands.html" class="active">Linux Commands</a>
+              </li>
+              <li>
+                <a href="file-permissions.html">Linux file-permissions</a>
+              </li>
+            </ul>
+          </div>
+        </aside>
+
+        <!-- CONTENT -->
+        <article class="content">
+          <div class="pill"><span class="pill-dot"></span>Linux</div>
+
+          <h1 class="article-title">Linux Commands (Pro Guide)</h1>
+          <p class="article-subtitle">
+            Master essential Linux commands used in real-world IT support and
+            DevOps environments.
+          </p>
+
+          <div class="meta-row">
+            <span class="meta-pill">Level: Beginner → Intermediate</span>
+            <span class="meta-pill">Track: DevOps</span>
+          </div>
+
+          <!-- FILE COMMANDS -->
+          <section class="article-section">
+            <h2>File & Directory Commands</h2>
+
+            <div class="neo-section">
+              <div class="neo-title">Navigation</div>
+              <code class="neo-command">pwd</code>
+              <code class="neo-command">ls</code>
+              <code class="neo-command">cd /home</code>
+            </div>
+
+            <div class="neo-section">
+              <div class="neo-title">File Management</div>
+              <code class="neo-command">touch file.txt</code>
+              <code class="neo-command">mkdir folder</code>
+              <code class="neo-command">rm file.txt</code>
+            </div>
+          </section>
+
+          <!-- FILE VIEW -->
+          <section class="article-section">
+            <h2>View & Read Files</h2>
+
+            <div class="neo-section">
+              <code class="neo-command">cat file.txt</code>
+              <code class="neo-command">less file.txt</code>
+              <code class="neo-command">head file.txt</code>
+              <code class="neo-command">tail file.txt</code>
+            </div>
+          </section>
+
+          <!-- PERMISSIONS -->
+          <section class="article-section">
+            <h2>Permissions</h2>
+
+            <div class="neo-section">
+              <code class="neo-command">chmod 755 file.sh</code>
+              <code class="neo-command">chown user file.txt</code>
+            </div>
+          </section>
+
+          <!-- PROCESS -->
+          <section class="article-section">
+            <h2>Process Management</h2>
+
+            <div class="neo-section">
+              <code class="neo-command">ps</code>
+              <code class="neo-command">top</code>
+              <code class="neo-command">kill -9 1234</code>
+            </div>
+          </section>
+
+          <!-- NETWORK -->
+          <section class="article-section">
+            <h2>Network Commands</h2>
+
+            <div class="neo-section">
+              <code class="neo-command">ping google.com</code>
+              <code class="neo-command">ifconfig</code>
+              <code class="neo-command">netstat -tuln</code>
+            </div>
+          </section>
+
+          <!-- SYSTEM -->
+          <section class="article-section">
+            <h2>System Info</h2>
+
+            <div class="neo-section">
+              <code class="neo-command">df -h</code>
+              <code class="neo-command">free -m</code>
+              <code class="neo-command">uname -a</code>
+            </div>
+          </section>
+
+          <!-- REAL FLOW -->
+          <section class="article-section">
+            <h2>Real DevOps Workflow</h2>
+
+            <code class="neo-command"> cd /app ls cat config.txt ps top </code>
+
+            <p>
+              This flow helps you navigate, check files, and monitor running
+              processes.
+            </p>
+          </section>
+
+          <!-- TIP -->
+          <section class="article-section">
+            <h2>💡 Pro Tip</h2>
+            <p>
+              Don’t try to learn all commands at once. Focus on categories and
+              practice daily.
+            </p>
+          </section>
+
+          <!-- NAV -->
+          <div class="pager-row">
+            <a href="linux.html" class="pager-btn secondary"
+              >◀ Back: Linux Overview</a
+            >
+            <a href="file-permissions.html" class="pager-btn"
+              >Next: File - Permissions ▶</a
+            >
+          </div>
+        </article>
+      </main>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <span>© 2026 Jayanth Boddu ™️</span>
+        <span>Built with pure HTML & CSS</span>
+      </footer>
+    </div>
+  </body>
+</html>

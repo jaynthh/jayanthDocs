@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Jayanth Docs – HTML Layout & Structure</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="page-shell">
+      <!-- TOP BAR -->
+      <header class="topbar">
+        <div class="topbar-inner">
+          <div class="brand">
+            <div class="brand-mark"></div>
+            <div class="brand-text">
+              <span class="brand-title">Jayanth Docs</span>
+              <span class="brand-sub">Java · DevOps · Web Notes</span>
+            </div>
+          </div>
+
+          <nav class="top-nav">
+            <a href="index.html">Overview</a>
+            <a href="index.html" class="nav-primary">HTML</a>
+            <a href="css-basics.html">CSS</a>
+            <a href="#">Java</a>
+            <a href="#">DevOps</a>
+          </nav>
+        </div>
+      </header>
+
+      <!-- MAIN WRAP -->
+      <main class="main-wrap">
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+          <div class="sidebar-title">Tutorial Index</div>
+
+          <div class="sidebar-section">
+            <div class="sidebar-section-label">Basics</div>
+            <ul class="sidebar-list">
+              <li><a href="index.html">HTML – Getting Started</a></li>
+              <li>
+                <a href="html-text-links.html">HTML – Text &amp; Links</a>
+              </li>
+              <li><a href="html-images.html">HTML – Images</a></li>
+              <li>
+                <a href="html-layout.html" class="active">HTML – Layout</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="sidebar-section">
+            <div class="sidebar-section-label">CSS</div>
+            <ul class="sidebar-list">
+              <li><a href="css-basics.html">CSS – Syntax</a></li>
+              <li><a href="#">CSS – Colors &amp; Fonts</a></li>
+              <li><a href="#">CSS – Flexbox</a></li>
+              <li><a href="#">CSS – Responsive</a></li>
+            </ul>
+          </div>
+        </aside>
+
+        <!-- MAIN ARTICLE -->
+        <article class="content">
+          <div class="pill">
+            <span class="pill-dot"></span>
+            HTML Layout
+          </div>
+
+          <h1 class="article-title">HTML Layout &amp; Semantic Structure</h1>
+          <p class="article-subtitle">
+            Learn how to structure your page using modern HTML5 layout tags
+            instead of only &lt;div&gt;.
+          </p>
+
+          <div class="meta-row">
+            <span class="meta-pill">Level: Beginner</span>
+            <span class="meta-pill">Estimated Time: 15 min</span>
+            <span class="meta-pill">Track: Web Development</span>
+          </div>
+
+          <!-- SECTION 1 -->
+          <section class="article-section">
+            <h2>Block vs Inline Elements</h2>
+            <p>In HTML, elements are mainly of two display types:</p>
+            <ul>
+              <li>
+                <strong>Block elements</strong> – start on a new line and take
+                full width (e.g. <code>&lt;div&gt;</code>,
+                <code>&lt;p&gt;</code>, <code>&lt;h1&gt;</code>,
+                <code>&lt;section&gt;</code>).
+              </li>
+              <li>
+                <strong>Inline elements</strong> – stay inside the text flow
+                (e.g. <code>&lt;span&gt;</code>, <code>&lt;a&gt;</code>,
+                <code>&lt;strong&gt;</code>).
+              </li>
+            </ul>
+
+            <pre><code>&lt;p&gt;This is a block element&lt;/p&gt;
+&lt;a href="#"&gt;This is inline&lt;/a&gt; text continues...</code></pre>
+          </section>
+
+          <!-- SECTION 2 -->
+          <section class="article-section">
+            <h2>HTML5 Semantic Layout Tags</h2>
+            <p>
+              Instead of using only <code>&lt;div&gt;</code>, we use semantic
+              tags to describe sections:
+            </p>
+            <ul>
+              <li><code>&lt;header&gt;</code> – top area, logo, navigation</li>
+              <li><code>&lt;nav&gt;</code> – navigation links</li>
+              <li><code>&lt;main&gt;</code> – main content of the page</li>
+              <li>
+                <code>&lt;section&gt;</code> – logical sections of content
+              </li>
+              <li>
+                <code>&lt;article&gt;</code> – independent content (blog post,
+                article)
+              </li>
+              <li>
+                <code>&lt;aside&gt;</code> – side content (sidebar, related
+                items)
+              </li>
+              <li>
+                <code>&lt;footer&gt;</code> – bottom area, copyright, links
+              </li>
+            </ul>
+          </section>
+
+          <!-- SECTION 3 -->
+          <section class="article-section">
+            <h2>Basic Page Layout Example</h2>
+            <p>Here is a simple layout structure using these tags:</p>
+
+            <pre><code>&lt;body&gt;
+  &lt;header&gt;
+    &lt;h1&gt;My Website&lt;/h1&gt;
+    &lt;nav&gt;
+      &lt;a href="#"&gt;Home&lt;/a&gt;
+      &lt;a href="#"&gt;About&lt;/a&gt;
+    &lt;/nav&gt;
+  &lt;/header&gt;
+
+  &lt;main&gt;
+    &lt;section&gt;
+      &lt;h2&gt;Latest Article&lt;/h2&gt;
+      &lt;article&gt;
+        &lt;h3&gt;Article Title&lt;/h3&gt;
+        &lt;p&gt;Article content...&lt;/p&gt;
+      &lt;/article&gt;
+    &lt;/section&gt;
+
+    &lt;aside&gt;
+      &lt;h3&gt;Sidebar&lt;/h3&gt;
+      &lt;p&gt;Links or extra info&lt;/p&gt;
+    &lt;/aside&gt;
+  &lt;/main&gt;
+
+  &lt;footer&gt;
+    &lt;p&gt;© 2025 My Website&lt;/p&gt;
+  &lt;/footer&gt;
+&lt;/body&gt;</code></pre>
+          </section>
+
+          <!-- SECTION 4 -->
+          <section class="article-section">
+            <h2>How This Jayanth Docs Page Uses Layout</h2>
+            <p>Your current project already uses a layout similar to this:</p>
+            <ul>
+              <li>
+                Top bar is like a <code>&lt;header&gt;</code> with brand and
+                <code>&lt;nav&gt;</code>.
+              </li>
+              <li>
+                Sidebar is like an <code>&lt;aside&gt;</code> with tutorial
+                links.
+              </li>
+              <li>
+                The big content area is an <code>&lt;article&gt;</code> inside
+                <code>&lt;main&gt;</code>.
+              </li>
+              <li>
+                Bottom area is a <code>&lt;footer&gt;</code> with copyright
+                text.
+              </li>
+            </ul>
+            <p>
+              Later, when you move to React or other frameworks, this mental
+              model of “header / main / sidebar / footer” will be very useful.
+            </p>
+          </section>
+
+          <!-- SECTION 5 -->
+          <section class="article-section">
+            <h2>Semantic Layout – Why It Matters</h2>
+            <ul>
+              <li>Helps search engines understand your page.</li>
+              <li>Improves accessibility for screen readers.</li>
+              <li>Makes your HTML code easier to read and maintain.</li>
+            </ul>
+          </section>
+
+          <!-- PAGER -->
+          <div class="pager-row">
+            <a href="html-images.html" class="pager-btn secondary"
+              >◀ Previous: HTML Images</a
+            >
+            <a href="#" class="pager-btn">Next: HTML Lists ▶</a>
+          </div>
+        </article>
+      </main>
+
+      <footer class="footer">
+        <span>© 2025 Jayanth · Liquid Glass Theme</span>
+        <span>Built with pure HTML &amp; CSS</span>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+    <title>Printer Not Working | Troubleshooting Guide</title>
+
+    <meta
+      name="description"
+      content="Fix printer issues using real L1 troubleshooting steps including spooler restart, driver checks, and connectivity."
+    />
+    <meta
+      name="keywords"
+      content="Printer Issue Fix, Spooler Restart, L1 Support, Troubleshooting"
+    />
+    <meta name="author" content="Jayanth" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="/images/favicon.ico" />
+  </head>
+
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="topbar-inner">
+          <div class="brand">
+            <div class="brand-mark"></div>
+            <div class="brand-text">
+              <span class="brand-title">Jayanth Docs</span>
+              <span class="brand-sub"
+                >Real-World ITSM · Troubleshooting Guides</span
+              >
+            </div>
+          </div>
+
+          <nav class="top-nav">
+            <a href="index.html">Overview</a>
+            <a href="itsm.html">ITSM</a>
+            <a href="troubleshooting.html" class="nav-primary"
+              >Troubleshooting</a
+            >
+            <a href="networking.html">Networking</a>
+            <a href="linux.html">Linux</a>
+            <a href="devops.html">DevOps</a>
+          </nav>
+        </div>
+      </header>
+
+      <main class="main-wrap">
+        <aside class="sidebar">
+          <div class="sidebar-title">Troubleshooting</div>
+
+          <div class="sidebar-section">
+            <div class="sidebar-section-label">Common Issues</div>
+            <ul class="sidebar-list">
+              <li><a href="slow-pc.html">Fix Slow PC</a></li>
+              <li><a href="no-internet.html">No Internet Issue</a></li>
+              <li>
+                <a href="printer-issue.html" class="active"
+                  >Printer Not Working</a
+                >
+              </li>
+              <li><a href="vpn-issue.html">VPN Issues</a></li>
+            </ul>
+          </div>
+        </aside>
+
+        <article class="content">
+          <div class="pill"><span class="pill-dot"></span>Troubleshooting</div>
+
+          <h1 class="article-title">Printer Not Working</h1>
+          <p class="article-subtitle">
+            Step-by-step troubleshooting used by L1 engineers to fix printing
+            issues quickly.
+          </p>
+
+          <div class="meta-row">
+            <span class="meta-pill">Level: Beginner</span>
+            <span class="meta-pill">Time: 10–15 min</span>
+            <span class="meta-pill">Scenario: Office Printer Issue</span>
+          </div>
+
+          <section class="article-section">
+            <h2>🔍 Problem</h2>
+            <p>User reports: <strong>"Printer is not printing"</strong></p>
+          </section>
+
+          <section class="article-section">
+            <h2>⚡ Quick Checks</h2>
+            <ol>
+              <li>Check printer power ON</li>
+              <li>Check cable / Wi-Fi connection</li>
+              <li>Check paper & ink levels</li>
+              <li>Set correct default printer</li>
+            </ol>
+          </section>
+
+          <section class="article-section">
+            <h2>🧠 Step-by-Step Fix</h2>
+
+            <p><strong>1. Check Printer Status</strong></p>
+            <p>Go to: Control Panel → Devices & Printers</p>
+            <p>Make sure printer is <strong>Online</strong></p>
+
+            <p><strong>2. Restart Print Spooler</strong></p>
+            <pre><code>services.msc</code></pre>
+            <p>Find <strong>Print Spooler → Restart</strong></p>
+
+            <p><strong>3. Clear Print Queue</strong></p>
+            <p>Cancel all stuck print jobs</p>
+
+            <p><strong>4. Reinstall Printer</strong></p>
+            <p>Remove device → Add printer again</p>
+
+            <p><strong>5. Check Driver</strong></p>
+            <p>Update or reinstall printer drivers</p>
+          </section>
+
+          <section class="article-section">
+            <h2>🛠 Common Causes</h2>
+            <ul>
+              <li>Print spooler stopped</li>
+              <li>Driver issue</li>
+              <li>Network printer not reachable</li>
+              <li>Stuck print queue</li>
+            </ul>
+          </section>
+
+          <section class="article-section">
+            <h2>💡 Real L1 Tip</h2>
+            <p>
+              If multiple users cannot print → likely network printer issue. If
+              only one user → local system issue.
+            </p>
+          </section>
+
+          <section class="article-section">
+            <h2>✅ Resolution Note (For Ticket)</h2>
+            <pre><code>Printer issue resolved after restarting print spooler and clearing queue. User confirmed printing is working.</code></pre>
+          </section>
+
+          <div class="pager-row">
+            <a href="no-internet.html" class="pager-btn secondary"
+              >◀ Previous: No Internet</a
+            >
+            <a href="vpn-issue.html" class="pager-btn">Next: VPN Issue ▶</a>
+          </div>
+        </article>
+      </main>
+
+      <footer class="footer">
+        <span>© 2026 Jayanth Boddu ™️</span>
+        <span>Built with pure HTML & CSS</span>
+      </footer>
+    </div>
+  </body>
+</html>

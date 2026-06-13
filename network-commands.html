@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+    <title>Network Commands | IT Support Guide</title>
+
+    <meta
+      name="description"
+      content="Learn important network commands like ping, ipconfig, nslookup, and how to use them in real IT troubleshooting."
+    />
+    <meta
+      name="keywords"
+      content="ping, ipconfig, nslookup, network commands, IT support"
+    />
+    <meta name="author" content="Jayanth" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="/images/favicon.ico" />
+  </head>
+
+  <body>
+    <div class="page-shell">
+      <!-- HEADER -->
+      <header class="topbar">
+        <div class="topbar-inner">
+          <div class="brand">
+            <div class="brand-mark"></div>
+            <div class="brand-text">
+              <span class="brand-title">Jayanth Docs</span>
+              <span class="brand-sub"
+                >Real-World ITSM · Troubleshooting Guides</span
+              >
+            </div>
+          </div>
+
+          <nav class="top-nav">
+            <a href="index.html">Overview</a>
+            <a href="itsm.html">ITSM</a>
+            <a href="troubleshooting.html">Troubleshooting</a>
+            <a href="networking.html" class="nav-primary">Networking</a>
+            <a href="linux.html">Linux</a>
+            <a href="devops.html">DevOps</a>
+          </nav>
+        </div>
+      </header>
+
+      <main class="main-wrap">
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+          <div class="sidebar-title">Networking</div>
+
+          <div class="sidebar-section">
+            <div class="sidebar-section-label">Basics</div>
+            <ul class="sidebar-list">
+              <li><a href="networking.html">Networking Overview</a></li>
+              <li><a href="ip-basics.html">IP Address Basics</a></li>
+              <li><a href="dns.html">DNS Explained</a></li>
+              <li>
+                <a href="network-commands.html" class="active"
+                  >Network Commands</a
+                >
+              </li>
+            </ul>
+          </div>
+        </aside>
+
+        <!-- CONTENT -->
+        <article class="content">
+          <div class="pill"><span class="pill-dot"></span>Networking</div>
+
+          <h1 class="article-title">Network Commands</h1>
+          <p class="article-subtitle">
+            Learn the most important commands used by IT support engineers to
+            troubleshoot network issues.
+          </p>
+
+          <div class="meta-row">
+            <span class="meta-pill">Level: Beginner</span>
+            <span class="meta-pill">Use Case: L1 Support</span>
+          </div>
+
+          <!-- INTRO -->
+          <section class="article-section">
+            <h2>Why These Commands Matter</h2>
+            <p>
+              These commands help you quickly identify network issues like
+              connectivity problems, DNS failures, and IP configuration errors.
+            </p>
+          </section>
+
+          <!-- IPCONFIG -->
+          <section class="article-section">
+            <h2>1. ipconfig</h2>
+            <pre><code>ipconfig</code></pre>
+            <p>Displays IP address, subnet mask, and default gateway.</p>
+
+            <pre><code>ipconfig /all</code></pre>
+            <p>Shows detailed network configuration.</p>
+          </section>
+
+          <!-- PING -->
+          <section class="article-section">
+            <h2>2. ping</h2>
+            <pre><code>ping 8.8.8.8</code></pre>
+            <p>Checks network connectivity.</p>
+
+            <pre><code>ping google.com</code></pre>
+            <p>Checks DNS + connectivity.</p>
+          </section>
+
+          <!-- NSLOOKUP -->
+          <section class="article-section">
+            <h2>3. nslookup</h2>
+            <pre><code>nslookup google.com</code></pre>
+            <p>Checks DNS resolution.</p>
+          </section>
+
+          <!-- TRACERT -->
+          <section class="article-section">
+            <h2>4. tracert</h2>
+            <pre><code>tracert google.com</code></pre>
+            <p>Shows the path packets take to reach a server.</p>
+          </section>
+
+          <!-- NETSH -->
+          <section class="article-section">
+            <h2>5. netsh (Network Reset)</h2>
+            <pre><code>netsh winsock reset
+netsh int ip reset</code></pre>
+            <p>Resets network configuration (used in major issues).</p>
+          </section>
+
+          <!-- FLUSHDNS -->
+          <section class="article-section">
+            <h2>6. Flush DNS</h2>
+            <pre><code>ipconfig /flushdns</code></pre>
+            <p>Clears DNS cache.</p>
+          </section>
+
+          <!-- REAL FLOW -->
+          <section class="article-section">
+            <h2>Real Troubleshooting Flow (L1)</h2>
+            <pre><code>Step 1: ipconfig → Check IP
+Step 2: ping 8.8.8.8 → Check network
+Step 3: ping google.com → Check DNS
+Step 4: nslookup → Verify DNS
+Step 5: netsh reset → Fix issues</code></pre>
+          </section>
+
+          <!-- TIP -->
+          <section class="article-section">
+            <h2>💡 Real L1 Tip</h2>
+            <p>
+              Don’t randomly try commands. Follow a logical sequence.
+              Understanding the output is more important than running the
+              command.
+            </p>
+          </section>
+
+          <!-- NAV -->
+          <div class="pager-row">
+            <a href="dns.html" class="pager-btn secondary">◀ Previous: DNS</a>
+            <a href="comingSoon.html" class="pager-btn">Next (Coming Soon) ▶</a>
+          </div>
+        </article>
+      </main>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <span>© 2026 Jayanth Boddu ™️</span>
+        <span>Built with pure HTML & CSS</span>
+      </footer>
+    </div>
+  </body>
+</html>

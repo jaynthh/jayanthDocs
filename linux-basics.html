@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+    <title>Linux Basics | Beginner Guide</title>
+
+    <meta
+      name="description"
+      content="Learn Linux basics including file system, commands, and real-world usage in IT support and DevOps."
+    />
+    <meta
+      name="keywords"
+      content="Linux Basics, Linux File System, DevOps Linux"
+    />
+    <meta name="author" content="Jayanth" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="/images/favicon.ico" />
+
+    <style>
+      /* 🔥 Neo accents (minimal usage) */
+      .neo-command {
+        color: #00ffcc;
+        background: rgba(0, 255, 204, 0.08);
+        padding: 8px;
+        border-radius: 6px;
+        display: block;
+        margin: 6px 0;
+      }
+
+      .neo-highlight {
+        color: #ffd166;
+      }
+
+      .neo-note {
+        border-left: 3px solid #6c5ce7;
+        padding-left: 12px;
+        margin: 10px 0;
+        opacity: 0.9;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="page-shell">
+      <!-- HEADER -->
+      <header class="topbar">
+        <div class="topbar-inner">
+          <div class="brand">
+            <div class="brand-mark"></div>
+            <div class="brand-text">
+              <span class="brand-title">Jayanth Docs</span>
+              <span class="brand-sub"
+                >Real-World ITSM · Troubleshooting Guides</span
+              >
+            </div>
+          </div>
+
+          <nav class="top-nav">
+            <a href="index.html">Overview</a>
+            <a href="itsm.html">ITSM</a>
+            <a href="troubleshooting.html">Troubleshooting</a>
+            <a href="networking.html">Networking</a>
+            <a href="linux.html" class="nav-primary">Linux</a>
+            <a href="devops.html">DevOps</a>
+          </nav>
+        </div>
+      </header>
+
+      <main class="main-wrap">
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+          <div class="sidebar-title">Linux</div>
+
+          <div class="sidebar-section">
+            <div class="sidebar-section-label">Basics</div>
+            <ul class="sidebar-list">
+              <li>
+                <a href="linux-basics.html" class="active">Linux Basics</a>
+              </li>
+              <li><a href="linux.html">Linux Overview</a></li>
+              <li><a href="linux-commands.html">Linux Commands</a></li>
+            </ul>
+          </div>
+        </aside>
+
+        <!-- CONTENT -->
+        <article class="content">
+          <div class="pill"><span class="pill-dot"></span>Linux</div>
+
+          <h1 class="article-title">Linux Basics</h1>
+          <p class="article-subtitle">
+            Start your Linux journey by understanding how the system works and
+            how to interact with it using commands.
+          </p>
+
+          <div class="meta-row">
+            <span class="meta-pill">Level: Beginner</span>
+            <span class="meta-pill">Track: DevOps / Linux</span>
+          </div>
+
+          <!-- WHAT IS -->
+          <section class="article-section">
+            <h2>What is Linux?</h2>
+            <p>
+              Linux is an open-source operating system used in servers, cloud
+              platforms, and DevOps environments.
+            </p>
+
+            <div class="neo-note">
+              Most modern applications run on Linux servers.
+            </div>
+          </section>
+
+          <!-- FILE SYSTEM -->
+          <section class="article-section">
+            <h2>Linux File System</h2>
+
+            <p>Linux uses a hierarchical structure:</p>
+
+            <code class="neo-command">
+              / (root)<br />
+              /home<br />
+              /etc<br />
+              /var
+            </code>
+
+            <ul>
+              <li><strong>/</strong> → Root directory</li>
+              <li><strong>/home</strong> → User files</li>
+              <li><strong>/etc</strong> → Configuration files</li>
+              <li><strong>/var</strong> → Logs and data</li>
+            </ul>
+          </section>
+
+          <!-- TERMINAL -->
+          <section class="article-section">
+            <h2>What is Terminal?</h2>
+            <p>
+              Terminal is where you run commands to interact with the system.
+            </p>
+
+            <div class="neo-note">
+              Linux is command-driven — most tasks are done using CLI.
+            </div>
+          </section>
+
+          <!-- BASIC COMMANDS -->
+          <section class="article-section">
+            <h2>Basic Commands</h2>
+
+            <p><span class="neo-highlight">Check current location:</span></p>
+            <code class="neo-command">pwd</code>
+
+            <p><span class="neo-highlight">List files:</span></p>
+            <code class="neo-command">ls</code>
+
+            <p><span class="neo-highlight">Change directory:</span></p>
+            <code class="neo-command">cd /home</code>
+          </section>
+
+          <!-- PERMISSIONS -->
+          <section class="article-section">
+            <h2>File Permissions (Basic Idea)</h2>
+
+            <code class="neo-command">-rwxr-xr--</code>
+
+            <p>
+              This represents read, write, and execute permissions for users.
+            </p>
+          </section>
+
+          <!-- REAL USE -->
+          <section class="article-section">
+            <h2>Real-World Use</h2>
+            <p>
+              Linux is used to manage servers, deploy applications, and run
+              backend systems.
+            </p>
+
+            <div class="neo-note">If you want DevOps → Linux is mandatory.</div>
+          </section>
+
+          <!-- TIP -->
+          <section class="article-section">
+            <h2>💡 Real Tip</h2>
+            <p>Don’t memorize commands — practice them daily.</p>
+          </section>
+
+          <!-- NAV -->
+          <div class="pager-row">
+            <a href="network-commands.html" class="pager-btn secondary"
+              >◀ Back: Networking</a
+            >
+            <a href="linux.html" class="pager-btn">Next: Linux Overview ▶</a>
+          </div>
+        </article>
+      </main>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <span>© 2026 Jayanth Boddu ™️</span>
+        <span>Built with pure HTML & CSS</span>
+      </footer>
+    </div>
+  </body>
+</html>

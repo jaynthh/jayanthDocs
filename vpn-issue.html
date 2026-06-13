@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+    <title>VPN Issues | Troubleshooting Guide</title>
+
+    <meta
+      name="description"
+      content="Fix VPN connection issues using real L1 troubleshooting steps including network checks, credentials, and reset commands."
+    />
+    <meta
+      name="keywords"
+      content="VPN Fix, VPN Not Connecting, L1 Support, Troubleshooting"
+    />
+    <meta name="author" content="Jayanth" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="/images/favicon.ico" />
+  </head>
+
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="topbar-inner">
+          <div class="brand">
+            <div class="brand-mark"></div>
+            <div class="brand-text">
+              <span class="brand-title">Jayanth Docs</span>
+              <span class="brand-sub"
+                >Real-World ITSM · Troubleshooting Guides</span
+              >
+            </div>
+          </div>
+
+          <nav class="top-nav">
+            <a href="index.html">Overview</a>
+            <a href="itsm.html">ITSM</a>
+            <a href="troubleshooting.html" class="nav-primary"
+              >Troubleshooting</a
+            >
+            <a href="networking.html">Networking</a>
+            <a href="linux.html">Linux</a>
+            <a href="devops.html">DevOps</a>
+          </nav>
+        </div>
+      </header>
+
+      <main class="main-wrap">
+        <aside class="sidebar">
+          <div class="sidebar-title">Troubleshooting</div>
+
+          <div class="sidebar-section">
+            <div class="sidebar-section-label">Common Issues</div>
+            <ul class="sidebar-list">
+              <li><a href="slow-pc.html">Fix Slow PC</a></li>
+              <li><a href="no-internet.html">No Internet Issue</a></li>
+              <li><a href="printer-issue.html">Printer Not Working</a></li>
+              <li><a href="vpn-issue.html" class="active">VPN Issues</a></li>
+            </ul>
+          </div>
+        </aside>
+
+        <article class="content">
+          <div class="pill"><span class="pill-dot"></span>Troubleshooting</div>
+
+          <h1 class="article-title">How to Fix VPN Issues</h1>
+          <p class="article-subtitle">
+            Step-by-step troubleshooting used by L1 engineers to resolve VPN
+            connection problems.
+          </p>
+
+          <div class="meta-row">
+            <span class="meta-pill">Level: Beginner</span>
+            <span class="meta-pill">Time: 10–15 min</span>
+            <span class="meta-pill">Scenario: Remote Access Issue</span>
+          </div>
+
+          <section class="article-section">
+            <h2>🔍 Problem</h2>
+            <p>User reports: <strong>"VPN is not connecting"</strong></p>
+          </section>
+
+          <section class="article-section">
+            <h2>⚡ Quick Checks</h2>
+            <ol>
+              <li>Check internet connection</li>
+              <li>Verify username & password</li>
+              <li>Ensure VPN client is installed</li>
+              <li>Restart system</li>
+            </ol>
+          </section>
+
+          <section class="article-section">
+            <h2>🧠 Step-by-Step Fix</h2>
+
+            <p><strong>1. Check Internet</strong></p>
+            <pre><code>ping 8.8.8.8</code></pre>
+            <p>If no internet → fix network first</p>
+
+            <p><strong>2. Reconnect VPN</strong></p>
+            <p>Disconnect → Connect again</p>
+
+            <p><strong>3. Check Credentials</strong></p>
+            <p>Ensure correct username, password, domain</p>
+
+            <p><strong>4. Restart VPN Service</strong></p>
+            <pre><code>services.msc</code></pre>
+            <p>Restart VPN-related service</p>
+
+            <p><strong>5. Reset Network</strong></p>
+            <pre><code>netsh winsock reset
+netsh int ip reset</code></pre>
+          </section>
+
+          <section class="article-section">
+            <h2>🛠 Common Causes</h2>
+            <ul>
+              <li>Wrong credentials</li>
+              <li>No internet connectivity</li>
+              <li>VPN server down</li>
+              <li>Firewall blocking VPN</li>
+            </ul>
+          </section>
+
+          <section class="article-section">
+            <h2>💡 Real L1 Tip</h2>
+            <p>
+              If multiple users cannot connect → VPN server issue → escalate
+              immediately. If only one user → check credentials or system.
+            </p>
+          </section>
+
+          <section class="article-section">
+            <h2>✅ Resolution Note (For Ticket)</h2>
+            <pre><code>VPN issue resolved after verifying credentials and resetting network settings. User confirmed successful connection.</code></pre>
+          </section>
+
+          <div class="pager-row">
+            <a href="printer-issue.html" class="pager-btn secondary"
+              >◀ Previous: Printer Issue</a
+            >
+            <a href="comingSoon.html" class="pager-btn"
+              >Next: (Coming Soon) ▶
+            </a>
+          </div>
+        </article>
+      </main>
+
+      <footer class="footer">
+        <span>© 2026 Jayanth Boddu ™️</span>
+        <span>Built with pure HTML & CSS</span>
+      </footer>
+    </div>
+  </body>
+</html>

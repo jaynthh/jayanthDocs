@@ -1,0 +1,439 @@
+/* ===========================
+       THEME TOKENS (Same family as email)
+       =========================== */
+:root {
+  --bg: #0b0b0b;
+  --bg-alt: #141414;
+  --bg-deep: #221a12;
+  --accent: #ff8c32;
+  --accent-soft: rgba(255, 140, 50, 0.12);
+  --accent-strong: #ffb067;
+  --accent-gradient: linear-gradient(135deg, #ffb067, #ff8c32, #ff6a00);
+
+  --text-main: #f9fafb;
+  --text-muted: #9ca3af;
+  --border-glass: rgba(255, 255, 255, 0.16);
+  --card-bg: rgba(255, 255, 255, 0.05);
+
+  --radius-xl: 24px;
+  --radius-lg: 18px;
+  --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.7);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI',
+    Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text-main);
+  background: linear-gradient(
+    180deg,
+    #0b0b0b 0%,
+    #141414 40%,
+    #221a12 70%,
+    #2a1a00 100%
+  );
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+a {
+  color: var(--accent-strong);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===========================
+       LAYOUT WRAPPER
+       =========================== */
+.page-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===========================
+       TOP NAVBAR
+       =========================== */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  background: rgba(5, 5, 5, 0.9);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.topbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-mark {
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  background: var(--accent-gradient);
+  box-shadow: 0 0 18px rgba(255, 140, 50, 0.7);
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.brand-title {
+  font-size: 15px;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.brand-sub {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.top-nav {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 13px;
+}
+
+.top-nav a {
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  color: #e5e7eb;
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+.top-nav a:hover {
+  border-color: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.03);
+  opacity: 1;
+}
+
+.top-nav a.nav-primary {
+  border-color: rgba(255, 255, 255, 0.16);
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+}
+
+/* ===========================
+       MAIN CONTENT REGION
+       =========================== */
+.main-wrap {
+  flex: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 16px 40px;
+  display: flex;
+  gap: 20px;
+}
+
+/* ===========================
+       SIDEBAR (like W3Schools left menu)
+       =========================== */
+.sidebar {
+  width: 260px;
+  flex-shrink: 0;
+  border-radius: var(--radius-xl);
+  background: var(--card-bg);
+  border: 1px solid var(--border-glass);
+  box-shadow: var(--shadow-soft);
+  padding: 16px 14px 18px;
+  position: sticky;
+  top: 72px;
+  align-self: flex-start;
+}
+
+.sidebar-title {
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent-strong);
+  margin-bottom: 10px;
+}
+
+.sidebar-section-label {
+  margin: 12px 0 6px;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.sidebar-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 13px;
+}
+
+.sidebar-list li a {
+  display: block;
+  padding: 7px 10px;
+  border-radius: 999px;
+  margin-bottom: 3px;
+  color: #e5e7eb;
+  text-decoration: none;
+  border: 1px solid transparent;
+}
+
+.sidebar-list li a:hover {
+  border-color: rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.sidebar-list li a.active {
+  background: var(--accent-soft);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: var(--accent-strong);
+}
+
+/* ===========================
+       MAIN ARTICLE CARD
+       =========================== */
+.content {
+  flex: 1;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-glass);
+  background: rgba(5, 5, 5, 0.7);
+  box-shadow: var(--shadow-soft);
+  padding: 24px 20px 28px;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--accent-strong);
+  margin-bottom: 10px;
+}
+
+.pill-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: var(--accent-gradient);
+  box-shadow: 0 0 12px rgba(255, 140, 50, 0.9);
+  /* faster blink */
+  animation: blink 0.8s infinite alternate;
+}
+
+@keyframes blink {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0.25;
+    transform: scale(0.75);
+  }
+}
+
+.article-title {
+  font-size: 24px;
+  font-weight: 650;
+  margin: 4px 0 4px;
+}
+
+.article-subtitle {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+}
+
+.meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-bottom: 22px;
+}
+
+.meta-pill {
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.article-section {
+  margin-bottom: 22px;
+}
+
+.article-section h2 {
+  font-size: 16px;
+  margin: 0 0 8px;
+}
+
+.article-section p {
+  font-size: 14px;
+  color: #e5e7eb;
+  line-height: 1.8;
+  margin: 0 0 10px;
+}
+
+.article-section ul {
+  padding-left: 20px;
+  margin: 6px 0 10px;
+  color: #e5e7eb;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* Code blocks / inline code */
+code {
+  font-family: 'SF Mono', Menlo, Monaco, Consolas, 'Liberation Mono',
+    'Courier New', monospace;
+  font-size: 12px;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 2px 5px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+pre {
+  margin: 10px 0 12px;
+  padding: 12px 12px;
+  border-radius: 14px;
+  background: rgba(0, 0, 0, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  font-size: 13px;
+  overflow-x: auto;
+}
+
+pre code {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+/* Previous / Next like W3Schools */
+.pager-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 26px;
+}
+
+.pager-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 9px 16px;
+  border-radius: 999px;
+  font-size: 13px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+  text-decoration: none;
+  min-width: 120px;
+}
+
+.pager-btn.secondary {
+  background: rgba(255, 255, 255, 0.02);
+  color: #e5e7eb;
+}
+
+.pager-btn:hover {
+  background: rgba(255, 255, 255, 0.07);
+  text-decoration: none;
+}
+
+/* ===========================
+       FOOTER
+       =========================== */
+.footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 16px 24px;
+  font-size: 11px;
+  color: var(--text-muted);
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  opacity: 0.9;
+}
+
+/* ===========================
+       RESPONSIVE
+       =========================== */
+@media (max-width: 960px) {
+  .main-wrap {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    position: static;
+    order: 2;
+  }
+
+  .content {
+    order: 1;
+  }
+}
+
+@media (max-width: 720px) {
+  .topbar-inner {
+    flex-wrap: wrap;
+  }
+
+  .top-nav {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .brand-title {
+    font-size: 14px;
+  }
+
+  .main-wrap {
+    padding-inline: 12px;
+  }
+
+  .content {
+    padding: 18px 14px 24px;
+    border-radius: 18px;
+  }
+
+  .sidebar {
+    border-radius: 18px;
+  }
+}

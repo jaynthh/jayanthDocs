@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+    <title>Git & GitHub Ultra Guide</title>
+
+    <meta
+      name="description"
+      content="Complete Git and GitHub guide with workflow diagrams and real-world usage."
+    />
+    <meta name="author" content="Jayanth" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      /* 🔥 Neo Command Colors */
+      .cmd {
+        font-family: monospace;
+        padding: 6px;
+        border-radius: 6px;
+        display: block;
+        margin: 6px 0;
+      }
+      .basic {
+        color: #00ffcc;
+        background: rgba(0, 255, 204, 0.08);
+      }
+      .branch {
+        color: #ffd166;
+        background: rgba(255, 209, 102, 0.08);
+      }
+      .remote {
+        color: #ff6b6b;
+        background: rgba(255, 107, 107, 0.08);
+      }
+      .adv {
+        color: #6c5ce7;
+        background: rgba(108, 92, 231, 0.08);
+      }
+
+      /* 🔥 Git Flow Diagram */
+      .flow {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        margin: 20px 0;
+        flex-wrap: wrap;
+      }
+      .flow-box {
+        flex: 1;
+        min-width: 120px;
+        padding: 15px;
+        text-align: center;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .arrow {
+        text-align: center;
+        font-size: 20px;
+        margin: 5px 0;
+        opacity: 0.6;
+      }
+
+      /* Section style */
+      .section-box {
+        border-left: 3px solid #6c5ce7;
+        padding-left: 12px;
+        margin: 12px 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="topbar-inner">
+          <div class="brand">
+            <div class="brand-mark"></div>
+            <div class="brand-text">
+              <span class="brand-title">Jayanth Docs</span>
+              <span class="brand-sub">DevOps · Git Guide</span>
+            </div>
+          </div>
+
+          <nav class="top-nav">
+            <a href="index.html">Overview</a>
+            <a href="itsm.html">ITSM</a>
+            <a href="troubleshooting.html">Troubleshooting</a>
+            <a href="networking.html">Networking</a>
+            <a href="linux.html">Linux</a>
+            <a href="devops.html" class="nav-primary">DevOps</a>
+          </nav>
+        </div>
+      </header>
+
+      <main class="main-wrap">
+        <article class="content">
+          <h1 class="article-title">Git & GitHub (Ultra Guide)</h1>
+          <p class="article-subtitle">
+            Learn Git visually + practically — from basics to advanced
+            workflows.
+          </p>
+
+          <!-- WHAT -->
+          <section class="article-section">
+            <h2>What is Git?</h2>
+            <p>Git tracks changes in your code and allows collaboration.</p>
+
+            <h2>What is GitHub?</h2>
+            <p>GitHub stores your Git repositories online.</p>
+          </section>
+
+          <!-- FLOW DIAGRAM -->
+          <section class="article-section">
+            <h2>Git Workflow (Visual)</h2>
+
+            <div class="flow">
+              <div class="flow-box">Working Directory</div>
+              <div class="flow-box">Staging Area</div>
+              <div class="flow-box">Local Repo</div>
+              <div class="flow-box">GitHub</div>
+            </div>
+
+            <div class="arrow">⬇</div>
+
+            <div class="flow">
+              <div class="flow-box">edit files</div>
+              <div class="flow-box">git add</div>
+              <div class="flow-box">git commit</div>
+              <div class="flow-box">git push</div>
+            </div>
+          </section>
+
+          <!-- BASIC -->
+          <section class="article-section">
+            <h2>Basic Commands</h2>
+
+            <code class="cmd basic">git init</code>
+            <code class="cmd basic">git status</code>
+            <code class="cmd basic">git add .</code>
+            <code class="cmd basic">git commit -m "message"</code>
+          </section>
+
+          <!-- BRANCH -->
+          <section class="article-section">
+            <h2>Branching (Important)</h2>
+
+            <code class="cmd branch">git branch feature</code>
+            <code class="cmd branch">git checkout feature</code>
+            <code class="cmd branch">git merge feature</code>
+
+            <div class="section-box">
+              <p>Branches allow you to work without affecting main code.</p>
+            </div>
+          </section>
+
+          <!-- REMOTE -->
+          <section class="article-section">
+            <h2>GitHub Commands</h2>
+
+            <code class="cmd remote">git remote add origin URL</code>
+            <code class="cmd remote">git push -u origin main</code>
+            <code class="cmd remote">git pull</code>
+            <code class="cmd remote">git clone URL</code>
+          </section>
+
+          <!-- ADVANCED -->
+          <section class="article-section">
+            <h2>Advanced (Interview Level)</h2>
+
+            <code class="cmd adv">git stash</code>
+            <code class="cmd adv">git rebase main</code>
+            <code class="cmd adv">git reset --hard HEAD</code>
+            <code class="cmd adv">git log --oneline</code>
+          </section>
+
+          <!-- REAL FLOW -->
+          <section class="article-section">
+            <h2>Real DevOps Workflow</h2>
+
+            <code class="cmd basic">
+              git checkout -b feature git add . git commit -m "feature added"
+              git push
+            </code>
+          </section>
+
+          <!-- TIP -->
+          <section class="article-section">
+            <h2>💡 Pro Tip</h2>
+
+            <div class="section-box">
+              <p>
+                Always use branches. Never work directly on main in real
+                projects.
+              </p>
+            </div>
+          </section>
+          <!-- NAV -->
+          <div class="pager-row">
+            <a href="devops.html" class="pager-btn secondary"
+              >◀ Back: Devops Introduction</a
+            >
+            <a href="comingSoon.html" class="pager-btn"
+              >Next: (Coming Soon) ▶</a
+            >
+          </div>
+        </article>
+      </main>
+
+      <footer class="footer">
+        <span>© 2026 Jayanth</span>
+      </footer>
+    </div>
+  </body>
+</html>

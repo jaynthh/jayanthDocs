@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Title -->
+    <title>Problem Management | ITSM Guide</title>
+
+    <!-- SEO Meta -->
+    <meta
+      name="description"
+      content="Learn Problem Management in ITSM, including root cause analysis (RCA), known errors, and how to prevent recurring incidents."
+    />
+    <meta
+      name="keywords"
+      content="Problem Management, ITSM, ITIL, RCA, Known Error, L1 Support, IT Support"
+    />
+    <meta name="author" content="Jayanth" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Problem Management | ITSM Guide" />
+    <meta
+      property="og:description"
+      content="Understand how IT teams identify root causes and prevent recurring issues."
+    />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:url"
+      content="https://jayanthb.in/problem-management.html"
+    />
+    <meta
+      property="og:image"
+      content="https://jayanthb.in/assets/problem-banner.png"
+    />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Problem Management | ITSM Guide" />
+    <meta
+      name="twitter:description"
+      content="Step-by-step guide to Problem Management and root cause analysis."
+    />
+    <meta
+      name="twitter:image"
+      content="https://jayanthb.in/assets/problem-banner.png"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="page-shell">
+      <!-- HEADER -->
+      <header class="topbar">
+        <div class="topbar-inner">
+          <div class="brand">
+            <div class="brand-mark"></div>
+            <div class="brand-text">
+              <span class="brand-title">Jayanth Docs</span>
+              <span class="brand-sub"
+                >Real-World ITSM · Troubleshooting Guides</span
+              >
+            </div>
+          </div>
+
+          <nav class="top-nav">
+            <a href="index.html">Overview</a>
+            <a href="itsm.html" class="nav-primary">ITSM</a>
+            <a href="troubleshooting.html">Troubleshooting</a>
+            <a href="networking.html">Networking</a>
+            <a href="linux.html">Linux</a>
+            <a href="devops.html">DevOps</a>
+          </nav>
+        </div>
+      </header>
+
+      <main class="main-wrap">
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+          <div class="sidebar-title">Knowledge Base</div>
+
+          <!-- ITSM -->
+          <div class="sidebar-section">
+            <div class="sidebar-section-label">ITSM</div>
+            <ul class="sidebar-list">
+              <li><a href="itsm.html">What is ITSM?</a></li>
+              <li>
+                <a href="incident-management.html">Incident Management</a>
+              </li>
+              <li><a href="service-requests.html">Service Requests</a></li>
+              <li>
+                <a href="problem-management.html" class="active">
+                  Problem Management
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Troubleshooting -->
+          <div class="sidebar-section">
+            <div class="sidebar-section-label">Troubleshooting</div>
+            <ul class="sidebar-list">
+              <li><a href="slow-pc.html">Fix Slow PC</a></li>
+              <li><a href="no-internet.html">No Internet Issue</a></li>
+              <li><a href="printer-issue.html">Printer Not Working</a></li>
+              <li><a href="vpn-issue.html">VPN Issues</a></li>
+            </ul>
+          </div>
+
+          <!-- Networking -->
+          <div class="sidebar-section">
+            <div class="sidebar-section-label">Networking</div>
+            <ul class="sidebar-list">
+              <li><a href="ip-basics.html">IP Address Basics</a></li>
+              <li><a href="dns.html">DNS Explained</a></li>
+              <li><a href="network-commands.html">Network Commands</a></li>
+            </ul>
+          </div>
+
+          <!-- Linux -->
+          <div class="sidebar-section">
+            <div class="sidebar-section-label">Linux</div>
+            <ul class="sidebar-list">
+              <li><a href="linux-basics.html">Linux Basics</a></li>
+              <li><a href="linux-commands.html">Important Commands</a></li>
+              <li><a href="file-permissions.html">File Permissions</a></li>
+            </ul>
+          </div>
+
+          <!-- DevOps -->
+          <div class="sidebar-section">
+            <div class="sidebar-section-label">DevOps</div>
+            <ul class="sidebar-list">
+              <li><a href="git-basics.html">Git & GitHub</a></li>
+              <li><a href="ci-cd.html">CI/CD Basics</a></li>
+              <li><a href="docker.html">Docker Intro</a></li>
+            </ul>
+          </div>
+        </aside>
+
+        <!-- CONTENT -->
+        <article class="content">
+          <div class="pill">
+            <span class="pill-dot"></span>
+            ITSM Core
+          </div>
+
+          <h1 class="article-title">Problem Management</h1>
+          <p class="article-subtitle">
+            Learn how IT teams identify root causes of recurring incidents and
+            prevent future issues using structured problem management practices.
+          </p>
+
+          <div class="meta-row">
+            <span class="meta-pill">Level: Beginner</span>
+            <span class="meta-pill">Estimated Time: 10 min</span>
+            <span class="meta-pill">Track: IT Support / ITSM</span>
+          </div>
+
+          <!-- WHAT IS -->
+          <section class="article-section">
+            <h2>What is a Problem?</h2>
+            <p>A problem is the underlying cause of one or more incidents.</p>
+
+            <p><strong>Example:</strong></p>
+            <ul>
+              <li>Incident: Internet disconnects daily</li>
+              <li>Problem: Faulty network switch</li>
+            </ul>
+          </section>
+
+          <!-- GOAL -->
+          <section class="article-section">
+            <h2>Goal of Problem Management</h2>
+            <p>
+              The goal is to identify the root cause of incidents and prevent
+              them from happening again.
+            </p>
+          </section>
+
+          <!-- INCIDENT VS PROBLEM -->
+          <section class="article-section">
+            <h2>Incident vs Problem</h2>
+            <pre><code>Incident = Fix the issue quickly
+Problem = Find and fix the root cause</code></pre>
+          </section>
+
+          <!-- RCA -->
+          <section class="article-section">
+            <h2>Root Cause Analysis (RCA)</h2>
+            <p>
+              Root Cause Analysis is the process of identifying the actual
+              reason behind a problem.
+            </p>
+
+            <p><strong>Common Methods:</strong></p>
+            <ul>
+              <li>5 Whys Technique</li>
+              <li>Log analysis</li>
+              <li>System monitoring</li>
+            </ul>
+          </section>
+
+          <!-- KNOWN ERROR -->
+          <section class="article-section">
+            <h2>Known Error Database (KEDB)</h2>
+            <p>
+              A Known Error is a problem that has been identified and documented
+              with a workaround.
+            </p>
+
+            <pre><code>Issue: VPN disconnects
+Workaround: Restart VPN client</code></pre>
+          </section>
+
+          <!-- REAL WORLD -->
+          <section class="article-section">
+            <h2>Real-World Example</h2>
+            <p>Multiple users report slow systems daily.</p>
+
+            <pre><code>Step 1: Analyze repeated incidents
+Step 2: Check system logs
+Step 3: Identify root cause (high CPU usage)
+Step 4: Fix by upgrading RAM or optimizing apps</code></pre>
+          </section>
+
+          <!-- PAGER -->
+          <div class="pager-row">
+            <a href="service-requests.html" class="pager-btn secondary">
+              ◀ Previous: Service Requests
+            </a>
+            <a href="comingSoon.html" class="pager-btn"
+              >Next: (Coming Soon) ▶
+            </a>
+          </div>
+        </article>
+      </main>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <span>© 2026 Jayanth Boddu ™️</span>
+        <span>Built with pure HTML &amp; CSS</span>
+      </footer>
+    </div>
+  </body>
+</html>

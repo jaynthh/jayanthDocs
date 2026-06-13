@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Jayanth Docs – HTML Text & Links</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="topbar-inner">
+          <div class="brand">
+            <div class="brand-mark"></div>
+            <div class="brand-text">
+              <span class="brand-title">Jayanth Docs</span>
+              <span class="brand-sub">Java · DevOps · Web Notes</span>
+            </div>
+          </div>
+
+          <nav class="top-nav">
+            <a href="index.html">Overview</a>
+            <a href="index.html" class="nav-primary">HTML</a>
+            <a href="css-basics.html">CSS</a>
+            <a href="#">Java</a>
+            <a href="#">DevOps</a>
+          </nav>
+        </div>
+      </header>
+
+      <main class="main-wrap">
+        <aside class="sidebar">
+          <div class="sidebar-title">Tutorial Index</div>
+
+          <div class="sidebar-section">
+            <div class="sidebar-section-label">Basics</div>
+            <ul class="sidebar-list">
+              <li><a href="index.html">HTML – Getting Started</a></li>
+              <li>
+                <a href="html-text-links.html" class="active"
+                  >HTML – Text &amp; Links</a
+                >
+              </li>
+              <li><a href="html-images.html">HTML – Images</a></li>
+              <li><a href="html-layout.html">HTML – Layout</a></li>
+            </ul>
+          </div>
+
+          <div class="sidebar-section">
+            <div class="sidebar-section-label">CSS</div>
+            <ul class="sidebar-list">
+              <li><a href="css-basics.html">CSS – Syntax</a></li>
+              <li><a href="#">CSS – Colors &amp; Fonts</a></li>
+              <li><a href="#">CSS – Flexbox</a></li>
+              <li><a href="#">CSS – Responsive</a></li>
+            </ul>
+          </div>
+        </aside>
+
+        <article class="content">
+          <div class="pill">
+            <span class="pill-dot"></span>
+            HTML Text & Links
+          </div>
+
+          <h1 class="article-title">HTML Text &amp; Links</h1>
+          <p class="article-subtitle">
+            Learn headings, paragraphs, and how to create links between your
+            pages.
+          </p>
+
+          <div class="meta-row">
+            <span class="meta-pill">Level: Beginner</span>
+            <span class="meta-pill">Estimated Time: 15 min</span>
+            <span class="meta-pill">Track: Web Development</span>
+          </div>
+
+          <section class="article-section">
+            <h2>Headings &amp; Paragraphs</h2>
+            <p>
+              HTML provides six heading tags from <code>&lt;h1&gt;</code> to
+              <code>&lt;h6&gt;</code>...
+            </p>
+            <pre><code>&lt;h1&gt;Main Title&lt;/h1&gt;
+&lt;h2&gt;Section Title&lt;/h2&gt;
+&lt;p&gt;This is a paragraph of text.&lt;/p&gt;</code></pre>
+          </section>
+
+          <section class="article-section">
+            <h2>Links</h2>
+            <p>Use the <code>&lt;a&gt;</code> tag to create links:</p>
+            <pre><code>&lt;a href="https://jayanthb.in"&gt;Visit my site&lt;/a&gt;</code></pre>
+            <p>To link between your tutorial pages:</p>
+            <pre><code>&lt;a href="index.html"&gt;Back to Introduction&lt;/a&gt;</code></pre>
+          </section>
+
+          <div class="pager-row">
+            <a href="index.html" class="pager-btn secondary"
+              >◀ Previous: Intro</a
+            >
+            <a href="html-images.html" class="pager-btn">Next: HTML Images ▶</a>
+          </div>
+        </article>
+      </main>
+
+      <footer class="footer">
+        <span>© 2025 Jayanth · Liquid Glass Theme</span>
+        <span>Built with pure HTML &amp; CSS</span>
+      </footer>
+    </div>
+  </body>
+</html>

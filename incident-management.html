@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Title -->
+    <title>Incident Management | ITSM Guide</title>
+
+    <!-- SEO Meta -->
+    <meta
+      name="description"
+      content="Learn Incident Management in ITSM with real-world examples, lifecycle, priorities, and L1 support workflow."
+    />
+    <meta
+      name="keywords"
+      content="Incident Management, ITSM, ITIL, L1 Support, Service Desk, Ticket Handling, IT Support"
+    />
+    <meta name="author" content="Jayanth" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Incident Management | ITSM Guide" />
+    <meta
+      property="og:description"
+      content="Understand how IT teams handle incidents using structured processes."
+    />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:url"
+      content="https://jayanthb.in/incident-management.html"
+    />
+    <meta
+      property="og:image"
+      content="https://jayanthb.in/assets/incident-banner.png"
+    />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Incident Management | ITSM Guide" />
+    <meta
+      name="twitter:description"
+      content="Step-by-step guide to Incident Management lifecycle and workflows."
+    />
+    <meta
+      name="twitter:image"
+      content="https://jayanthb.in/assets/incident-banner.png"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="page-shell">
+      <!-- HEADER -->
+      <header class="topbar">
+        <div class="topbar-inner">
+          <div class="brand">
+            <div class="brand-mark"></div>
+            <div class="brand-text">
+              <span class="brand-title">Jayanth Docs</span>
+              <span class="brand-sub"
+                >Real-World ITSM · Troubleshooting Guides</span
+              >
+            </div>
+          </div>
+
+          <nav class="top-nav">
+            <a href="index.html">Overview</a>
+            <a href="itsm.html" class="nav-primary">ITSM</a>
+            <a href="troubleshooting.html">Troubleshooting</a>
+            <a href="networking.html">Networking</a>
+            <a href="linux.html">Linux</a>
+            <a href="devops.html">DevOps</a>
+          </nav>
+        </div>
+      </header>
+
+      <main class="main-wrap">
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+          <div class="sidebar-title">Knowledge Base</div>
+
+          <!-- ITSM -->
+          <div class="sidebar-section">
+            <div class="sidebar-section-label">ITSM</div>
+            <ul class="sidebar-list">
+              <li><a href="itsm.html">What is ITSM?</a></li>
+              <li>
+                <a href="incident-management.html" class="active">
+                  Incident Management
+                </a>
+              </li>
+              <li><a href="service-requests.html">Service Requests</a></li>
+              <li><a href="problem-management.html">Problem Management</a></li>
+            </ul>
+          </div>
+
+          <!-- Troubleshooting -->
+          <div class="sidebar-section">
+            <div class="sidebar-section-label">Troubleshooting</div>
+            <ul class="sidebar-list">
+              <li><a href="slow-pc.html">Fix Slow PC</a></li>
+              <li><a href="no-internet.html">No Internet Issue</a></li>
+              <li><a href="printer-issue.html">Printer Not Working</a></li>
+              <li><a href="vpn-issue.html">VPN Issues</a></li>
+            </ul>
+          </div>
+
+          <!-- Networking -->
+          <div class="sidebar-section">
+            <div class="sidebar-section-label">Networking</div>
+            <ul class="sidebar-list">
+              <li><a href="ip-basics.html">IP Address Basics</a></li>
+              <li><a href="dns.html">DNS Explained</a></li>
+              <li><a href="network-commands.html">Network Commands</a></li>
+            </ul>
+          </div>
+
+          <!-- Linux -->
+          <div class="sidebar-section">
+            <div class="sidebar-section-label">Linux</div>
+            <ul class="sidebar-list">
+              <li><a href="linux-basics.html">Linux Basics</a></li>
+              <li><a href="linux-commands.html">Important Commands</a></li>
+              <li><a href="file-permissions.html">File Permissions</a></li>
+            </ul>
+          </div>
+
+          <!-- DevOps -->
+          <div class="sidebar-section">
+            <div class="sidebar-section-label">DevOps</div>
+            <ul class="sidebar-list">
+              <li><a href="git-basics.html">Git & GitHub</a></li>
+              <li><a href="ci-cd.html">CI/CD Basics</a></li>
+              <li><a href="docker.html">Docker Intro</a></li>
+            </ul>
+          </div>
+        </aside>
+
+        <!-- CONTENT -->
+        <article class="content">
+          <div class="pill">
+            <span class="pill-dot"></span>
+            ITSM Core
+          </div>
+
+          <h1 class="article-title">Incident Management</h1>
+          <p class="article-subtitle">
+            Learn how IT support teams quickly restore services when issues
+            occur, using structured incident handling workflows.
+          </p>
+
+          <div class="meta-row">
+            <span class="meta-pill">Level: Beginner</span>
+            <span class="meta-pill">Estimated Time: 10 min</span>
+            <span class="meta-pill">Track: IT Support / ITSM</span>
+          </div>
+
+          <!-- WHAT IS INCIDENT -->
+          <section class="article-section">
+            <h2>What is an Incident?</h2>
+            <p>
+              An incident is any unplanned interruption or reduction in the
+              quality of an IT service.
+            </p>
+
+            <p><strong>Examples:</strong></p>
+            <ul>
+              <li>No internet connection</li>
+              <li>System not booting</li>
+              <li>Email not working</li>
+              <li>Application crash</li>
+            </ul>
+          </section>
+
+          <!-- GOAL -->
+          <section class="article-section">
+            <h2>Goal of Incident Management</h2>
+            <p>
+              The primary goal is to restore normal service operation as quickly
+              as possible with minimal impact on business operations.
+            </p>
+          </section>
+
+          <!-- LIFECYCLE -->
+          <section class="article-section">
+            <h2>Incident Lifecycle</h2>
+            <ol>
+              <li><strong>Identify:</strong> User reports issue</li>
+              <li><strong>Log:</strong> Ticket created in system</li>
+              <li><strong>Categorize:</strong> Type of issue</li>
+              <li><strong>Prioritize:</strong> Based on impact & urgency</li>
+              <li><strong>Assign:</strong> To support team</li>
+              <li><strong>Resolve:</strong> Fix the issue</li>
+              <li><strong>Close:</strong> Confirm with user</li>
+            </ol>
+          </section>
+
+          <!-- PRIORITY -->
+          <section class="article-section">
+            <h2>Priority Levels</h2>
+            <pre><code>P1 - Critical (System down)
+P2 - High (Major functionality issue)
+P3 - Medium (Partial issue)
+P4 - Low (Minor issue)</code></pre>
+          </section>
+
+          <!-- REAL WORLD -->
+          <section class="article-section">
+            <h2>Real-World Example (L1 Support)</h2>
+            <p>User reports: "No Internet"</p>
+
+            <pre><code>Step 1: Check network cable
+Step 2: Restart system
+Step 3: Run ipconfig /renew
+Step 4: Escalate if unresolved</code></pre>
+          </section>
+
+          <!-- PAGER -->
+          <div class="pager-row">
+            <a href="itsm.html" class="pager-btn secondary">
+              ◀ Previous: ITSM Intro
+            </a>
+            <a href="service-requests.html" class="pager-btn">
+              Next: Service Requests ▶
+            </a>
+          </div>
+        </article>
+      </main>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <span>© 2026 Jayanth Boddu ™️</span>
+        <span>Built with pure HTML &amp; CSS</span>
+      </footer>
+    </div>
+  </body>
+</html>

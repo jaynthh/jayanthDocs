@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+    <title>DNS Explained | Networking Guide</title>
+
+    <meta
+      name="description"
+      content="Learn DNS (Domain Name System), how it works, and how to troubleshoot DNS issues in real IT support scenarios."
+    />
+    <meta
+      name="keywords"
+      content="DNS, Domain Name System, nslookup, Networking, IT Support"
+    />
+    <meta name="author" content="Jayanth" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="/images/favicon.ico" />
+  </head>
+
+  <body>
+    <div class="page-shell">
+      <!-- HEADER -->
+      <header class="topbar">
+        <div class="topbar-inner">
+          <div class="brand">
+            <div class="brand-mark"></div>
+            <div class="brand-text">
+              <span class="brand-title">Jayanth Docs</span>
+              <span class="brand-sub"
+                >Real-World ITSM · Troubleshooting Guides</span
+              >
+            </div>
+          </div>
+
+          <nav class="top-nav">
+            <a href="index.html">Overview</a>
+            <a href="itsm.html">ITSM</a>
+            <a href="troubleshooting.html">Troubleshooting</a>
+            <a href="networking.html" class="nav-primary">Networking</a>
+            <a href="linux.html">Linux</a>
+            <a href="devops.html">DevOps</a>
+          </nav>
+        </div>
+      </header>
+
+      <main class="main-wrap">
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+          <div class="sidebar-title">Networking</div>
+
+          <div class="sidebar-section">
+            <div class="sidebar-section-label">Basics</div>
+            <ul class="sidebar-list">
+              <li><a href="networking.html">Networking Overview</a></li>
+              <li><a href="ip-basics.html">IP Address Basics</a></li>
+              <li><a href="dns.html" class="active">DNS Explained</a></li>
+              <li><a href="network-commands.html">Network Commands</a></li>
+            </ul>
+          </div>
+        </aside>
+
+        <!-- CONTENT -->
+        <article class="content">
+          <div class="pill"><span class="pill-dot"></span>Networking</div>
+
+          <h1 class="article-title">DNS (Domain Name System)</h1>
+          <p class="article-subtitle">
+            Understand how domain names are converted into IP addresses and how
+            DNS issues are handled in real-world IT support.
+          </p>
+
+          <div class="meta-row">
+            <span class="meta-pill">Level: Beginner</span>
+            <span class="meta-pill">Track: Networking</span>
+          </div>
+
+          <!-- WHAT IS DNS -->
+          <section class="article-section">
+            <h2>What is DNS?</h2>
+            <p>DNS (Domain Name System) is like the internet’s phonebook.</p>
+            <p>
+              It converts human-friendly domain names (like google.com) into IP
+              addresses (like 142.250.x.x) that computers understand.
+            </p>
+          </section>
+
+          <!-- EXAMPLE -->
+          <section class="article-section">
+            <h2>Example</h2>
+            <pre><code>google.com → 142.250.183.14</code></pre>
+          </section>
+
+          <!-- HOW IT WORKS -->
+          <section class="article-section">
+            <h2>How DNS Works (Simple Flow)</h2>
+            <ol>
+              <li>User enters website (google.com)</li>
+              <li>System asks DNS server</li>
+              <li>DNS returns IP address</li>
+              <li>Browser connects to server</li>
+            </ol>
+          </section>
+
+          <!-- COMMANDS -->
+          <section class="article-section">
+            <h2>Useful DNS Commands</h2>
+
+            <p><strong>Check DNS resolution:</strong></p>
+            <pre><code>nslookup google.com</code></pre>
+
+            <p><strong>Flush DNS cache:</strong></p>
+            <pre><code>ipconfig /flushdns</code></pre>
+          </section>
+
+          <!-- TROUBLESHOOTING -->
+          <section class="article-section">
+            <h2>DNS Troubleshooting (Important)</h2>
+
+            <pre><code>ping 8.8.8.8  → Works (Internet OK)
+ping google.com → Fails (DNS issue)</code></pre>
+
+            <p>If IP ping works but domain fails → DNS problem.</p>
+          </section>
+
+          <!-- COMMON ISSUES -->
+          <section class="article-section">
+            <h2>Common DNS Issues</h2>
+            <ul>
+              <li>Website not opening</li>
+              <li>DNS server not responding</li>
+              <li>Slow browsing</li>
+            </ul>
+          </section>
+
+          <!-- REAL USE -->
+          <section class="article-section">
+            <h2>Real-World Use (L1 Support)</h2>
+            <p>
+              When a user says "Internet is not working", DNS is often the
+              issue.
+            </p>
+
+            <pre><code>Step 1: ping IP
+Step 2: ping domain
+Step 3: flush DNS
+Step 4: change DNS (8.8.8.8)</code></pre>
+          </section>
+
+          <!-- TIP -->
+          <section class="article-section">
+            <h2>💡 Real L1 Tip</h2>
+            <p>
+              Always test both IP and domain. That quickly tells whether the
+              issue is network or DNS.
+            </p>
+          </section>
+
+          <!-- NAV -->
+          <div class="pager-row">
+            <a href="ip-basics.html" class="pager-btn secondary"
+              >◀ Previous: IP Basics</a
+            >
+            <a href="network-commands.html" class="pager-btn"
+              >Next: Network Commands ▶</a
+            >
+          </div>
+        </article>
+      </main>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <span>© 2026 Jayanth Boddu ™️</span>
+        <span>Built with pure HTML & CSS</span>
+      </footer>
+    </div>
+  </body>
+</html>

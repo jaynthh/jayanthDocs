@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+    <title>DevOps Introduction | Ultra Guide</title>
+
+    <meta
+      name="description"
+      content="Learn DevOps fundamentals, workflow, and tools used in real-world software delivery."
+    />
+    <meta name="author" content="Jayanth" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      /* 🔥 Neo DevOps Theme */
+      .neo-dev {
+        color: #00ffcc;
+      }
+      .neo-build {
+        color: #ffd166;
+      }
+      .neo-deploy {
+        color: #ff6b6b;
+      }
+      .neo-monitor {
+        color: #6c5ce7;
+      }
+
+      .cmd {
+        padding: 6px;
+        border-radius: 6px;
+        display: block;
+        margin: 6px 0;
+        background: rgba(255, 255, 255, 0.05);
+        font-family: monospace;
+      }
+
+      /* 🔥 Pipeline Flow */
+      .pipeline {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        margin: 20px 0;
+        flex-wrap: wrap;
+      }
+
+      .stage {
+        flex: 1;
+        min-width: 120px;
+        padding: 15px;
+        border-radius: 10px;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      /* subtle highlight */
+      .section-box {
+        border-left: 3px solid #6c5ce7;
+        padding-left: 12px;
+        margin: 12px 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="topbar-inner">
+          <div class="brand">
+            <div class="brand-mark"></div>
+            <div class="brand-text">
+              <span class="brand-title">Jayanth Docs</span>
+              <span class="brand-sub">DevOps · Real World Guide</span>
+            </div>
+          </div>
+
+          <nav class="top-nav">
+            <a href="index.html">Overview</a>
+            <a href="linux.html">Linux</a>
+            <a href="git-basics.html">Git</a>
+            <a href="devops.html" class="nav-primary">DevOps</a>
+          </nav>
+        </div>
+      </header>
+
+      <main class="main-wrap">
+        <article class="content">
+          <h1 class="article-title">DevOps Introduction</h1>
+          <p class="article-subtitle">
+            Understand how modern software is built, tested, and deployed using
+            DevOps practices.
+          </p>
+
+          <div class="meta-row">
+            <span class="meta-pill">Level: Beginner</span>
+            <span class="meta-pill">Track: DevOps Career</span>
+          </div>
+
+          <!-- WHAT -->
+          <section class="article-section">
+            <h2>What is DevOps?</h2>
+            <p>
+              DevOps is a practice that combines development (Dev) and
+              operations (Ops) to deliver software faster and more reliably.
+            </p>
+
+            <div class="section-box">
+              <p>
+                Goal: <span class="neo-dev">Faster delivery</span> +
+                <span class="neo-deploy">Stable systems</span>
+              </p>
+            </div>
+          </section>
+
+          <!-- PIPELINE -->
+          <section class="article-section">
+            <h2>DevOps Pipeline (Visual)</h2>
+
+            <div class="pipeline">
+              <div class="stage neo-dev">Code</div>
+              <div class="stage neo-build">Build</div>
+              <div class="stage neo-deploy">Deploy</div>
+              <div class="stage neo-monitor">Monitor</div>
+            </div>
+
+            <div class="pipeline">
+              <div class="stage">Git</div>
+              <div class="stage">CI/CD</div>
+              <div class="stage">Docker</div>
+              <div class="stage">Logs</div>
+            </div>
+          </section>
+
+          <!-- FLOW -->
+          <section class="article-section">
+            <h2>How DevOps Works</h2>
+
+            <code class="cmd">
+              Developer → Git → CI/CD → Deploy → Monitor
+            </code>
+
+            <p>
+              Code is pushed to Git, automatically built, deployed, and
+              monitored.
+            </p>
+          </section>
+
+          <!-- TOOLS -->
+          <section class="article-section">
+            <h2>Common DevOps Tools</h2>
+
+            <ul>
+              <li><strong>Git</strong> → Version control</li>
+              <li><strong>Jenkins</strong> → CI/CD</li>
+              <li><strong>Docker</strong> → Containers</li>
+              <li><strong>Kubernetes</strong> → Orchestration</li>
+              <li><strong>Linux</strong> → Server environment</li>
+            </ul>
+          </section>
+
+          <!-- REAL WORLD -->
+          <section class="article-section">
+            <h2>Real-World Example</h2>
+
+            <code class="cmd">
+              git push → Jenkins builds → Docker deploy → App live
+            </code>
+          </section>
+
+          <!-- WHY -->
+          <section class="article-section">
+            <h2>Why DevOps is Important</h2>
+
+            <ul>
+              <li>Faster releases</li>
+              <li>Less downtime</li>
+              <li>Automation reduces manual work</li>
+            </ul>
+          </section>
+
+          <!-- TIP -->
+          <section class="article-section">
+            <h2>💡 Pro Tip</h2>
+
+            <div class="section-box">
+              <p>DevOps is not a tool — it’s a workflow mindset.</p>
+            </div>
+          </section>
+
+          <!-- NAV -->
+          <div class="pager-row">
+            <a href="git-basics.html" class="pager-btn secondary"
+              >◀ Back: Git</a
+            >
+            <a href="comingSoon.html" class="pager-btn">Next: CI/CD ▶</a>
+          </div>
+        </article>
+      </main>
+
+      <footer class="footer">
+        <span>© 2026 Jayanth</span>
+      </footer>
+    </div>
+  </body>
+</html>

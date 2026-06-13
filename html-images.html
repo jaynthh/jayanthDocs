@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Jayanth Docs – HTML Images</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="page-shell">
+      <!-- ===========================
+         TOP BAR
+    =========================== -->
+      <header class="topbar">
+        <div class="topbar-inner">
+          <div class="brand">
+            <div class="brand-mark"></div>
+            <div class="brand-text">
+              <span class="brand-title">Jayanth Docs</span>
+              <span class="brand-sub">Java · DevOps · Web Notes</span>
+            </div>
+          </div>
+
+          <nav class="top-nav">
+            <a href="index.html">Overview</a>
+            <a href="index.html" class="nav-primary">HTML</a>
+            <a href="css-basics.html">CSS</a>
+            <a href="#">Java</a>
+            <a href="#">DevOps</a>
+          </nav>
+        </div>
+      </header>
+
+      <!-- ===========================
+         MAIN WRAP
+    =========================== -->
+      <main class="main-wrap">
+        <!-- Sidebar LEFT -->
+        <aside class="sidebar">
+          <div class="sidebar-title">Tutorial Index</div>
+
+          <div class="sidebar-section">
+            <div class="sidebar-section-label">Basics</div>
+            <ul class="sidebar-list">
+              <li><a href="index.html">HTML – Getting Started</a></li>
+              <li>
+                <a href="html-text-links.html">HTML – Text &amp; Links</a>
+              </li>
+              <li>
+                <a href="html-images.html" class="active">HTML – Images</a>
+              </li>
+              <li><a href="html-layout.html">HTML – Layout</a></li>
+            </ul>
+          </div>
+
+          <div class="sidebar-section">
+            <div class="sidebar-section-label">CSS</div>
+            <ul class="sidebar-list">
+              <li><a href="css-basics.html">CSS – Syntax</a></li>
+              <li><a href="#">CSS – Colors &amp; Fonts</a></li>
+              <li><a href="#">CSS – Flexbox</a></li>
+              <li><a href="#">CSS – Responsive</a></li>
+            </ul>
+          </div>
+        </aside>
+
+        <!-- MAIN ARTICLE -->
+        <article class="content">
+          <div class="pill">
+            <span class="pill-dot"></span>
+            HTML Images
+          </div>
+
+          <h1 class="article-title">
+            HTML Images – Adding Images to Your Web Pages
+          </h1>
+          <p class="article-subtitle">
+            Learn how to display images, control size, add alt text, and make
+            responsive images.
+          </p>
+
+          <div class="meta-row">
+            <span class="meta-pill">Level: Beginner</span>
+            <span class="meta-pill">Estimated Time: 10 min</span>
+            <span class="meta-pill">Track: Web Development</span>
+          </div>
+
+          <!-- SECTION 1 -->
+          <section class="article-section">
+            <h2>The &lt;img&gt; Tag</h2>
+            <p>
+              HTML uses the <code>&lt;img&gt;</code> tag to display images. It
+              is a self-closing tag (no ending tag required).
+            </p>
+
+            <pre><code>&lt;img src="photo.jpg" alt="Description of image"&gt;</code></pre>
+
+            <ul>
+              <li><strong>src</strong> → path or URL of the image</li>
+              <li>
+                <strong>alt</strong> → text shown if image fails to load
+                (important for SEO & accessibility)
+              </li>
+            </ul>
+          </section>
+
+          <!-- SECTION 2 -->
+          <section class="article-section">
+            <h2>Image Size (width & height)</h2>
+            <p>
+              You can control image size using <code>width</code> and
+              <code>height</code> attributes:
+            </p>
+
+            <pre><code>&lt;img src="car.png" width="300" height="200" alt="Car"&gt;</code></pre>
+
+            <p>
+              Recommendation: Use only <strong>width</strong> so the browser
+              maintains correct aspect ratio.
+            </p>
+          </section>
+
+          <!-- SECTION 3 -->
+          <section class="article-section">
+            <h2>Responsive Images (Fit in All Screens)</h2>
+            <p>Make images automatically resize on mobile using CSS:</p>
+
+            <pre><code>img {
+  max-width: 100%;
+  height: auto;
+}</code></pre>
+
+            <p>This ensures the image never overflows the screen.</p>
+          </section>
+
+          <!-- SECTION 4 -->
+          <section class="article-section">
+            <h2>Image from a Website URL</h2>
+            <pre><code>&lt;img src="https://picsum.photos/400" alt="Random image"&gt;</code></pre>
+            <p>Perfect for testing when you don’t have local images.</p>
+          </section>
+
+          <!-- SECTION 5 -->
+          <section class="article-section">
+            <h2>Clickable Image (Image Link)</h2>
+            <p>Wrap the image inside an anchor tag:</p>
+
+            <pre><code>&lt;a href="https://google.com"&gt;
+  &lt;img src="logo.png" width="120" alt="Google"&gt;
+&lt;/a&gt;</code></pre>
+          </section>
+
+          <!-- SECTION 6 -->
+          <section class="article-section">
+            <h2>Image Tooltip</h2>
+            <p>Use the <code>title</code> attribute:</p>
+
+            <pre><code>&lt;img src="sun.png" alt="Sun" title="This is the sun"&gt;</code></pre>
+          </section>
+
+          <!-- SECTION 7 -->
+          <section class="article-section">
+            <h2>Common Image Formats</h2>
+            <ul>
+              <li><strong>JPG</strong> – Photos, high detail</li>
+              <li><strong>PNG</strong> – Transparent backgrounds</li>
+              <li><strong>GIF</strong> – Animation</li>
+              <li><strong>SVG</strong> – Logos, icons (scalable)</li>
+              <li><strong>WEBP</strong> – Modern, lightweight, recommended</li>
+            </ul>
+          </section>
+
+          <!-- PAGER -->
+          <div class="pager-row">
+            <a href="html-text-links.html" class="pager-btn secondary"
+              >◀ Previous: Text & Links</a
+            >
+            <a href="html-layout.html" class="pager-btn">Next: HTML Layout ▶</a>
+          </div>
+        </article>
+      </main>
+
+      <footer class="footer">
+        <span>© 2025 Jayanth · Liquid Glass Theme</span>
+        <span>Built with pure HTML &amp; CSS</span>
+      </footer>
+    </div>
+  </body>
+</html>

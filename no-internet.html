@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+    <title>No Internet Issue | Troubleshooting Guide</title>
+
+    <meta
+      name="description"
+      content="Step-by-step guide to troubleshoot no internet issues using real L1 support methods and commands."
+    />
+    <meta
+      name="keywords"
+      content="No Internet Fix, Network Issue, L1 Support, Troubleshooting, ipconfig"
+    />
+    <meta name="author" content="Jayanth" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="/images/favicon.ico" />
+  </head>
+
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="topbar-inner">
+          <div class="brand">
+            <div class="brand-mark"></div>
+            <div class="brand-text">
+              <span class="brand-title">Jayanth Docs</span>
+              <span class="brand-sub"
+                >Real-World ITSM · Troubleshooting Guides</span
+              >
+            </div>
+          </div>
+
+          <nav class="top-nav">
+            <a href="index.html">Overview</a>
+            <a href="itsm.html">ITSM</a>
+            <a href="troubleshooting.html" class="nav-primary"
+              >Troubleshooting</a
+            >
+            <a href="networking.html">Networking</a>
+            <a href="linux.html">Linux</a>
+            <a href="devops.html">DevOps</a>
+          </nav>
+        </div>
+      </header>
+
+      <main class="main-wrap">
+        <aside class="sidebar">
+          <div class="sidebar-title">Troubleshooting</div>
+
+          <div class="sidebar-section">
+            <div class="sidebar-section-label">Common Issues</div>
+            <ul class="sidebar-list">
+              <li><a href="slow-pc.html">Fix Slow PC</a></li>
+              <li>
+                <a href="no-internet.html" class="active">No Internet Issue</a>
+              </li>
+              <li><a href="printer-issue.html">Printer Not Working</a></li>
+              <li><a href="vpn-issue.html">VPN Issues</a></li>
+            </ul>
+          </div>
+        </aside>
+
+        <article class="content">
+          <div class="pill"><span class="pill-dot"></span>Troubleshooting</div>
+
+          <h1 class="article-title">How to Fix No Internet Issue</h1>
+          <p class="article-subtitle">
+            Step-by-step troubleshooting used by L1 engineers to quickly restore
+            network connectivity.
+          </p>
+
+          <div class="meta-row">
+            <span class="meta-pill">Level: Beginner</span>
+            <span class="meta-pill">Time: 10–15 min</span>
+            <span class="meta-pill">Scenario: Network Issue</span>
+          </div>
+
+          <section class="article-section">
+            <h2>🔍 Problem</h2>
+            <p>User reports: <strong>"Internet is not working"</strong></p>
+          </section>
+
+          <section class="article-section">
+            <h2>⚡ Quick Checks (Always Start Here)</h2>
+            <ol>
+              <li>Check Wi-Fi / LAN connected</li>
+              <li>Check airplane mode OFF</li>
+              <li>Restart router & system</li>
+              <li>Try another device (to confirm issue)</li>
+            </ol>
+          </section>
+
+          <section class="article-section">
+            <h2>🧠 Step-by-Step Troubleshooting</h2>
+
+            <p><strong>1. Check IP Address</strong></p>
+            <pre><code>ipconfig</code></pre>
+            <p>
+              If IP starts with <strong>169.x.x.x</strong> → network issue (no
+              DHCP)
+            </p>
+
+            <p><strong>2. Renew IP Address</strong></p>
+            <pre><code>ipconfig /release
+ipconfig /renew</code></pre>
+
+            <p><strong>3. Check Connectivity</strong></p>
+            <pre><code>ping 8.8.8.8</code></pre>
+            <p>If ping fails → network problem</p>
+
+            <p><strong>4. Check DNS</strong></p>
+            <pre><code>ping google.com</code></pre>
+            <p>If IP ping works but domain fails → DNS issue</p>
+
+            <p><strong>5. Reset Network</strong></p>
+            <pre><code>netsh int ip reset
+netsh winsock reset</code></pre>
+          </section>
+
+          <section class="article-section">
+            <h2>🛠 Common Causes</h2>
+            <ul>
+              <li>Router issue</li>
+              <li>IP conflict / DHCP failure</li>
+              <li>DNS problem</li>
+              <li>Network adapter issue</li>
+            </ul>
+          </section>
+
+          <section class="article-section">
+            <h2>💡 Real L1 Tip</h2>
+            <p>
+              Always check if issue is user-specific or network-wide. If
+              multiple users are affected → escalate quickly.
+            </p>
+          </section>
+
+          <section class="article-section">
+            <h2>✅ Resolution Note (For Ticket)</h2>
+            <pre><code>Internet restored after renewing IP address and resetting network stack. User confirmed connectivity is working.</code></pre>
+          </section>
+
+          <div class="pager-row">
+            <a href="slow-pc.html" class="pager-btn secondary"
+              >◀ Previous: Slow PC</a
+            >
+            <a href="printer-issue.html" class="pager-btn"
+              >Next: Printer Issue ▶</a
+            >
+          </div>
+        </article>
+      </main>
+
+      <footer class="footer">
+        <span>© 2026 Jayanth Boddu ™️</span>
+        <span>Built with pure HTML & CSS</span>
+      </footer>
+    </div>
+  </body>
+</html>

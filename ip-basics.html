@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+    <title>IP Address Basics | Networking Guide</title>
+
+    <meta
+      name="description"
+      content="Learn IP address basics including types, private vs public IP, and how to check IP in real-world IT support."
+    />
+    <meta
+      name="keywords"
+      content="IP Address, Private IP, Public IP, Networking Basics, ipconfig"
+    />
+    <meta name="author" content="Jayanth" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="/images/favicon.ico" />
+  </head>
+
+  <body>
+    <div class="page-shell">
+      <!-- HEADER -->
+      <header class="topbar">
+        <div class="topbar-inner">
+          <div class="brand">
+            <div class="brand-mark"></div>
+            <div class="brand-text">
+              <span class="brand-title">Jayanth Docs</span>
+              <span class="brand-sub"
+                >Real-World ITSM · Troubleshooting Guides</span
+              >
+            </div>
+          </div>
+
+          <nav class="top-nav">
+            <a href="index.html">Overview</a>
+            <a href="itsm.html">ITSM</a>
+            <a href="troubleshooting.html">Troubleshooting</a>
+            <a href="networking.html" class="nav-primary">Networking</a>
+            <a href="linux.html">Linux</a>
+            <a href="devops.html">DevOps</a>
+          </nav>
+        </div>
+      </header>
+
+      <main class="main-wrap">
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+          <div class="sidebar-title">Networking</div>
+
+          <div class="sidebar-section">
+            <div class="sidebar-section-label">Basics</div>
+            <ul class="sidebar-list">
+              <li><a href="networking.html">Networking Overview</a></li>
+              <li>
+                <a href="ip-basics.html" class="active">IP Address Basics</a>
+              </li>
+              <li><a href="dns.html">DNS Explained</a></li>
+              <li><a href="network-commands.html">Network Commands</a></li>
+            </ul>
+          </div>
+        </aside>
+
+        <!-- CONTENT -->
+        <article class="content">
+          <div class="pill"><span class="pill-dot"></span>Networking</div>
+
+          <h1 class="article-title">IP Address Basics</h1>
+          <p class="article-subtitle">
+            Understand what an IP address is, its types, and how it is used in
+            real-world networking and troubleshooting.
+          </p>
+
+          <div class="meta-row">
+            <span class="meta-pill">Level: Beginner</span>
+            <span class="meta-pill">Track: Networking</span>
+          </div>
+
+          <!-- WHAT IS IP -->
+          <section class="article-section">
+            <h2>What is an IP Address?</h2>
+            <p>
+              An IP (Internet Protocol) address is a unique identifier assigned
+              to each device on a network.
+            </p>
+            <p>
+              It allows devices to communicate with each other over a network or
+              the internet.
+            </p>
+          </section>
+
+          <!-- EXAMPLE -->
+          <section class="article-section">
+            <h2>Example of IP Address</h2>
+            <pre><code>192.168.1.10</code></pre>
+            <p>This is a typical IPv4 address used in local networks.</p>
+          </section>
+
+          <!-- TYPES -->
+          <section class="article-section">
+            <h2>Types of IP Addresses</h2>
+            <ul>
+              <li>
+                <strong>Private IP:</strong> Used inside local network
+                (home/office)
+              </li>
+              <li>
+                <strong>Public IP:</strong> Assigned by ISP for internet access
+              </li>
+            </ul>
+          </section>
+
+          <!-- PRIVATE RANGE -->
+          <section class="article-section">
+            <h2>Private IP Ranges</h2>
+            <pre><code>192.168.x.x
+10.x.x.x
+172.16.x.x – 172.31.x.x</code></pre>
+          </section>
+
+          <!-- SPECIAL CASE -->
+          <section class="article-section">
+            <h2>⚠️ Special IP (Important)</h2>
+            <pre><code>169.254.x.x</code></pre>
+            <p>
+              This indicates the system failed to get an IP from DHCP (common
+              network issue).
+            </p>
+          </section>
+
+          <!-- HOW TO CHECK -->
+          <section class="article-section">
+            <h2>How to Check IP Address</h2>
+
+            <p><strong>Windows:</strong></p>
+            <pre><code>ipconfig</code></pre>
+
+            <p><strong>Linux:</strong></p>
+            <pre><code>ifconfig
+or
+ip a</code></pre>
+          </section>
+
+          <!-- REAL USE -->
+          <section class="article-section">
+            <h2>Real-World Use (L1 Support)</h2>
+            <p>
+              When user reports "No Internet", checking IP is the first step.
+            </p>
+
+            <pre><code>If IP = 169.x.x.x → DHCP issue
+If no IP → network disconnected
+If valid IP → check DNS or gateway</code></pre>
+          </section>
+
+          <!-- TIP -->
+          <section class="article-section">
+            <h2>💡 Real L1 Tip</h2>
+            <p>
+              Always verify IP before doing advanced troubleshooting. Most
+              issues can be identified just by looking at the IP.
+            </p>
+          </section>
+
+          <!-- NAV -->
+          <div class="pager-row">
+            <a href="networking.html" class="pager-btn secondary"
+              >◀ Back: Networking</a
+            >
+            <a href="dns.html" class="pager-btn">Next: DNS ▶</a>
+          </div>
+        </article>
+      </main>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <span>© 2026 Jayanth Boddu ™️</span>
+        <span>Built with pure HTML & CSS</span>
+      </footer>
+    </div>
+  </body>
+</html>

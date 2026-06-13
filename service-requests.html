@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Title -->
+    <title>Service Requests | ITSM Guide</title>
+
+    <!-- SEO Meta -->
+    <meta
+      name="description"
+      content="Learn Service Requests in ITSM with examples, workflow, and how L1 support teams handle user requests efficiently."
+    />
+    <meta
+      name="keywords"
+      content="Service Requests, ITSM, ITIL, L1 Support, Service Desk, Ticket Handling, IT Support"
+    />
+    <meta name="author" content="Jayanth" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Service Requests | ITSM Guide" />
+    <meta
+      property="og:description"
+      content="Understand how IT teams handle service requests like password reset, software installation, and access requests."
+    />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:url"
+      content="https://jayanthb.in/service-requests.html"
+    />
+    <meta
+      property="og:image"
+      content="https://jayanthb.in/assets/service-banner.png"
+    />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Service Requests | ITSM Guide" />
+    <meta
+      name="twitter:description"
+      content="Step-by-step guide to handling service requests in IT support."
+    />
+    <meta
+      name="twitter:image"
+      content="https://jayanthb.in/assets/service-banner.png"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="page-shell">
+      <!-- HEADER -->
+      <header class="topbar">
+        <div class="topbar-inner">
+          <div class="brand">
+            <div class="brand-mark"></div>
+            <div class="brand-text">
+              <span class="brand-title">Jayanth Docs</span>
+              <span class="brand-sub"
+                >Real-World ITSM · Troubleshooting Guides</span
+              >
+            </div>
+          </div>
+
+          <nav class="top-nav">
+            <a href="index.html">Overview</a>
+            <a href="itsm.html" class="nav-primary">ITSM</a>
+            <a href="troubleshooting.html">Troubleshooting</a>
+            <a href="networking.html">Networking</a>
+            <a href="linux.html">Linux</a>
+            <a href="devops.html">DevOps</a>
+          </nav>
+        </div>
+      </header>
+
+      <main class="main-wrap">
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+          <div class="sidebar-title">Knowledge Base</div>
+
+          <!-- ITSM -->
+          <div class="sidebar-section">
+            <div class="sidebar-section-label">ITSM</div>
+            <ul class="sidebar-list">
+              <li><a href="itsm.html">What is ITSM?</a></li>
+              <li>
+                <a href="incident-management.html">Incident Management</a>
+              </li>
+              <li>
+                <a href="service-requests.html" class="active">
+                  Service Requests
+                </a>
+              </li>
+              <li><a href="problem-management.html">Problem Management</a></li>
+            </ul>
+          </div>
+
+          <!-- Troubleshooting -->
+          <div class="sidebar-section">
+            <div class="sidebar-section-label">Troubleshooting</div>
+            <ul class="sidebar-list">
+              <li><a href="slow-pc.html">Fix Slow PC</a></li>
+              <li><a href="no-internet.html">No Internet Issue</a></li>
+              <li><a href="printer-issue.html">Printer Not Working</a></li>
+              <li><a href="vpn-issue.html">VPN Issues</a></li>
+            </ul>
+          </div>
+
+          <!-- Networking -->
+          <div class="sidebar-section">
+            <div class="sidebar-section-label">Networking</div>
+            <ul class="sidebar-list">
+              <li><a href="ip-basics.html">IP Address Basics</a></li>
+              <li><a href="dns.html">DNS Explained</a></li>
+              <li><a href="network-commands.html">Network Commands</a></li>
+            </ul>
+          </div>
+
+          <!-- Linux -->
+          <div class="sidebar-section">
+            <div class="sidebar-section-label">Linux</div>
+            <ul class="sidebar-list">
+              <li><a href="linux-basics.html">Linux Basics</a></li>
+              <li><a href="linux-commands.html">Important Commands</a></li>
+              <li><a href="file-permissions.html">File Permissions</a></li>
+            </ul>
+          </div>
+
+          <!-- DevOps -->
+          <div class="sidebar-section">
+            <div class="sidebar-section-label">DevOps</div>
+            <ul class="sidebar-list">
+              <li><a href="git-basics.html">Git & GitHub</a></li>
+              <li><a href="ci-cd.html">CI/CD Basics</a></li>
+              <li><a href="docker.html">Docker Intro</a></li>
+            </ul>
+          </div>
+        </aside>
+
+        <!-- CONTENT -->
+        <article class="content">
+          <div class="pill">
+            <span class="pill-dot"></span>
+            ITSM Core
+          </div>
+
+          <h1 class="article-title">Service Requests</h1>
+          <p class="article-subtitle">
+            Learn how IT teams handle routine user requests like password
+            resets, access requests, and software installations in a structured
+            way.
+          </p>
+
+          <div class="meta-row">
+            <span class="meta-pill">Level: Beginner</span>
+            <span class="meta-pill">Estimated Time: 8 min</span>
+            <span class="meta-pill">Track: IT Support / ITSM</span>
+          </div>
+
+          <!-- WHAT IS -->
+          <section class="article-section">
+            <h2>What is a Service Request?</h2>
+            <p>
+              A service request is a formal request from a user for something
+              they need — not a failure or issue.
+            </p>
+
+            <p><strong>Examples:</strong></p>
+            <ul>
+              <li>Password reset</li>
+              <li>New software installation</li>
+              <li>Access to applications</li>
+              <li>New laptop request</li>
+            </ul>
+          </section>
+
+          <!-- INCIDENT VS REQUEST -->
+          <section class="article-section">
+            <h2>Incident vs Service Request</h2>
+            <pre><code>Incident = Something is broken
+Service Request = Something is needed</code></pre>
+          </section>
+
+          <!-- WORKFLOW -->
+          <section class="article-section">
+            <h2>Service Request Workflow</h2>
+            <ol>
+              <li><strong>Raise Request:</strong> User submits ticket</li>
+              <li><strong>Approval:</strong> Manager approval (if required)</li>
+              <li><strong>Fulfillment:</strong> IT team processes request</li>
+              <li><strong>Closure:</strong> Confirm with user</li>
+            </ol>
+          </section>
+
+          <!-- REAL WORLD -->
+          <section class="article-section">
+            <h2>Real-World Example (L1 Support)</h2>
+            <p>User requests: "Reset my password"</p>
+
+            <pre><code>Step 1: Verify user identity
+Step 2: Reset password in system
+Step 3: Share temporary password
+Step 4: Ask user to change password after login</code></pre>
+          </section>
+
+          <!-- BENEFITS -->
+          <section class="article-section">
+            <h2>Why Service Requests Matter</h2>
+            <ul>
+              <li>Standardized request handling</li>
+              <li>Improves efficiency</li>
+              <li>Better tracking and reporting</li>
+              <li>Enhances user satisfaction</li>
+            </ul>
+          </section>
+
+          <!-- PAGER -->
+          <div class="pager-row">
+            <a href="incident-management.html" class="pager-btn secondary">
+              ◀ Previous: Incident Management
+            </a>
+            <a href="problem-management.html" class="pager-btn">
+              Next: Problem Management ▶
+            </a>
+          </div>
+        </article>
+      </main>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <span>© 2026 Jayanth Boddu ™️</span>
+        <span>Built with pure HTML &amp; CSS</span>
+      </footer>
+    </div>
+  </body>
+</html>
