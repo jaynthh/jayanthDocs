@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+    <title>404 - Page Not Found</title>
+
+    <meta
+      name="description"
+      content="Page not found. Redirecting to homepage."
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      /* 🔥 FULL PAGE CENTER */
+      .error-container {
+        height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* 🧊 CARD */
+      .error-card {
+        text-align: center;
+        padding: 40px;
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(10px);
+        max-width: 500px;
+        width: 90%;
+      }
+
+      /* 🔢 404 TEXT */
+      .error-code {
+        font-size: 72px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: #6c5ce7;
+      }
+
+      /* TITLE */
+      .error-title {
+        font-size: 22px;
+        margin-bottom: 10px;
+      }
+
+      /* DESCRIPTION */
+      .error-desc {
+        font-size: 15px;
+        opacity: 0.8;
+        margin-bottom: 20px;
+      }
+
+      /* COUNTDOWN */
+      .countdown {
+        font-size: 14px;
+        margin-bottom: 20px;
+        color: #00ffcc;
+      }
+
+      /* BUTTONS */
+      .actions a {
+        display: inline-block;
+        margin: 8px;
+        padding: 10px 18px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-size: 14px;
+      }
+
+      .btn-primary {
+        background: #6c5ce7;
+        color: #fff;
+      }
+
+      .btn-secondary {
+        border: 1px solid #555;
+        color: #ddd;
+      }
+
+      .btn-secondary:hover {
+        background: rgba(255, 255, 255, 0.05);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="page-shell">
+      <!-- HEADER -->
+      <header class="topbar">
+        <div class="topbar-inner">
+          <div class="brand">
+            <div class="brand-mark"></div>
+            <div class="brand-text">
+              <span class="brand-title">Jayanth Blog</span>
+              <span class="brand-sub">IT · DevOps · Real Guides</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- MAIN -->
+      <main class="main-wrap">
+        <div class="error-container">
+          <div class="error-card">
+            <div class="error-code">404</div>
+
+            <h1 class="error-title">Page Not Found</h1>
+
+            <p class="error-desc">
+              The page you’re looking for doesn’t exist or has been moved.
+            </p>
+
+            <div class="countdown">
+              Redirecting to homepage in <span id="timer">5</span> seconds...
+            </div>
+
+            <div class="actions">
+              <a href="index.html" class="btn-primary">Go Home</a>
+              <a href="javascript:history.back()" class="btn-secondary"
+                >← Go Back</a
+              >
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <span>© 2026 Jayanth</span>
+      </footer>
+    </div>
+
+    <!-- 🔥 AUTO REDIRECT + COUNTDOWN -->
+    <script>
+      let timeLeft = 10;
+      const timerElement = document.getElementById('timer');
+
+      const countdown = setInterval(() => {
+        timeLeft--;
+        timerElement.textContent = timeLeft;
+
+        if (timeLeft <= 0) {
+          clearInterval(countdown);
+          window.location.href = 'index.html';
+        }
+      }, 1000);
+    </script>
+  </body>
+</html>
