@@ -191,6 +191,10 @@
                 Real-world guides for troubleshooting, networking, Linux, and
                 DevOps.
               </p>
+              <div class="last-update">
+                <span>🟢 Last Updated:</span>
+                <span id="lastUpdated"></span>
+              </div>
             </section>
 
             <section class="featured">
@@ -352,6 +356,23 @@
           }
         });
       }
+    </script>
+    <!-- This is Last update script File :) -->
+    <script>
+      const updateElement = document.getElementById('lastUpdated');
+
+      const lastModified = new Date(document.lastModified);
+
+      const options = {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+      };
+
+      updateElement.textContent = lastModified.toLocaleDateString(
+        'en-US',
+        options,
+      );
     </script>
   </body>
 </html>

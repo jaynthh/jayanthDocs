@@ -545,3 +545,24 @@ pre code {
   border-radius: 20px;
   background: rgba(108, 92, 231, 0.15);
 }
+/* Last update */
+
+.last-update {
+  margin-top: 15px;
+  font-size: 13px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  opacity: 0.9;
+}
+
+.last-update span {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+.new-topic {
+  color: #00ffcc;
+}
