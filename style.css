@@ -488,8 +488,9 @@ pre code {
 
 .author-bio {
   font-size: 14px;
+  line-height: 1.6;
   opacity: 0.85;
-  margin: 12px 0;
+  max-width: 240px;
 }
 
 /* STATS */
@@ -535,4 +536,12 @@ pre code {
 
 .btn-secondary:hover {
   background: rgba(255, 255, 255, 0.05);
+}
+.author-tags span {
+  display: inline-block;
+  font-size: 11px;
+  padding: 4px 8px;
+  margin: 4px;
+  border-radius: 20px;
+  background: rgba(108, 92, 231, 0.15);
 }
